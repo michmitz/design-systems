@@ -1,26 +1,31 @@
+/* Hearth's import must come first: @import rules have to stay contiguous at the
+   top of the file, and @import "tailwindcss" expands into @layer blocks that
+   would otherwise push this one out of position (and get it silently dropped). */
+@import "../lib/design-systems/hearth/styles.css";
 @import "tailwindcss";
 
+/* typography.css's own @import (Google Fonts) never reaches the browser — see
+   lib/design-systems/hearth/fonts.ts. Point the token variables at the
+   self-hosted next/font/google output instead, same families/weights/styles,
+   keeping every other Hearth token as-is. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-display: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
+  --font-body: var(--font-figtree), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Hearth powers the site shell (gallery + chrome around each detail page).
+   Each system's own detail page layers its own prefixed tokens on top. */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+a {
+  color: var(--accent-primary);
+}
+
+a:hover {
+  color: var(--accent-primary-hover);
 }

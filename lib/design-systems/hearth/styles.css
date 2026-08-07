@@ -1,0 +1,13 @@
+/* Hearth design system — root stylesheet, loaded by app/globals.css.
+   typography.css opens with an `@import` (Google Fonts) of its own, and CSS
+   requires all `@import`s in a document to precede any other rule — so it has
+   to load first here, ahead of colors.css, or the font import gets silently
+   dropped once colors.css's `:root` rules are inlined before it. This is a
+   build-order concern only: none of these files' declarations conflict, and
+   the "download/copy tokens" feature concatenates the raw files in the
+   colors -> typography -> spacing -> effects order specified in the README,
+   independent of this file. */
+@import "./tokens/typography.css";
+@import "./tokens/colors.css";
+@import "./tokens/spacing.css";
+@import "./tokens/effects.css";

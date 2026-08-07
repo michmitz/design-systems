@@ -1,0 +1,62 @@
+:root {
+  /* base palette */
+  --color-cream-50: #FBF6EF;
+  --color-cream-100: #F3ECE1;
+  --color-cream-200: #E8DECC;
+  --color-paper-0: #FFFDF9;
+
+  --color-ink-900: #3A332C;
+  --color-ink-700: #5C5347;
+  --color-ink-500: #8A8074;
+  --color-ink-300: #C7BEB0;
+
+  --color-clay-100: #F2DCC9;
+  --color-clay-300: #E4A57C;
+  --color-clay-500: #C1622D;
+  --color-clay-600: #A84F21;
+  --color-clay-700: #833C19;
+
+  --color-sage-100: #E3E8D9;
+  --color-sage-300: #A9B891;
+  --color-sage-500: #6B7A55;
+  --color-sage-700: #4C5A3B;
+
+  --color-gold-100: #F7E7C4;
+  --color-gold-300: #E8C270;
+  --color-gold-500: #D9A441;
+  --color-gold-700: #A87A28;
+
+  --color-brick-500: #A63D2E;
+  --color-teal-500: #4E7C79;
+
+  /* semantic aliases */
+  --bg-page: var(--color-cream-50);
+  --bg-surface: var(--color-cream-100);
+  --bg-surface-raised: var(--color-paper-0);
+  --bg-sunk: var(--color-cream-200);
+
+  --text-primary: var(--color-ink-900);
+  --text-secondary: var(--color-ink-700);
+  --text-muted: var(--color-ink-500);
+  --text-on-accent: var(--color-paper-0);
+
+  --accent-primary: var(--color-clay-500);
+  --accent-primary-hover: var(--color-clay-600);
+  --accent-primary-active: var(--color-clay-700);
+  --accent-primary-tint: var(--color-clay-100);
+
+  --accent-secondary: var(--color-sage-500);
+  --accent-secondary-tint: var(--color-sage-100);
+
+  --accent-tertiary: var(--color-gold-500);
+  --accent-tertiary-tint: var(--color-gold-100);
+
+  --status-success: var(--color-sage-500);
+  --status-warning: var(--color-gold-600, #C68B2E);
+  --status-danger: var(--color-brick-500);
+  --status-info: var(--color-teal-500);
+
+  --border-hairline: rgba(58, 51, 44, 0.12);
+  --border-strong: rgba(58, 51, 44, 0.22);
+  --border-accent: var(--color-clay-500);
+}
