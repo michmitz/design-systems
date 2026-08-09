@@ -1,4 +1,4 @@
-/* Hearth design system — root stylesheet, loaded by app/globals.css.
+/* Bloom design system — root stylesheet.
    tokens/typography.css is deliberately NOT imported here — see
    typography-vars.css for why, and import that alongside this file for the
    full type scale. colors/spacing/effects have no @import of their own, so

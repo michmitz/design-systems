@@ -1,0 +1,36 @@
+:root {
+  --s-white: #FFFFFF;
+  --s-gray-50: #F7F7F7;
+  --s-gray-100: #EDEDED;
+  --s-gray-200: #D6D6D6;
+  --s-gray-300: #B8B8B8;
+  --s-gray-400: #8C8C8C;
+  --s-gray-500: #6B6B6B;
+  --s-gray-600: #4A4A4A;
+  --s-gray-700: #2E2E2E;
+  --s-gray-800: #1A1A1A;
+  --s-black: #111111;
+
+  --s-bg-page: var(--s-white);
+  --s-bg-surface: var(--s-gray-50);
+  --s-bg-surface-raised: var(--s-white);
+  --s-bg-sunk: var(--s-gray-100);
+
+  --s-text-primary: var(--s-black);
+  --s-text-secondary: var(--s-gray-600);
+  --s-text-muted: var(--s-gray-400);
+  --s-text-on-accent: var(--s-white);
+
+  --s-accent-primary: var(--s-black);
+  --s-accent-primary-hover: var(--s-gray-700);
+  --s-accent-primary-active: var(--s-gray-800);
+
+  --s-status-success: var(--s-gray-700);
+  --s-status-warning: var(--s-gray-500);
+  --s-status-danger: var(--s-black);
+  --s-status-info: var(--s-gray-600);
+
+  --s-border-hairline: rgba(17, 17, 17, 0.14);
+  --s-border-strong: rgba(17, 17, 17, 0.32);
+  --s-border-accent: var(--s-black);
+}

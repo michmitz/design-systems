@@ -1,0 +1,16 @@
+:root {
+  --b-radius-sm: 14px;
+  --b-radius-md: 22px;
+  --b-radius-lg: 32px;
+  --b-radius-full: 999px;
+
+  --b-shadow-sm: 0 2px 8px rgba(180, 130, 200, 0.12);
+  --b-shadow-md: 0 8px 24px rgba(180, 130, 200, 0.16);
+  --b-shadow-lg: 0 20px 48px rgba(180, 130, 200, 0.20);
+  --b-shadow-glow: 0 0 32px rgba(244, 143, 177, 0.28);
+
+  --b-ease-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --b-ease-soft: cubic-bezier(0.34, 0.2, 0.2, 1.1);
+  --b-duration-fast: 160ms;
+  --b-duration-base: 260ms;
+}
