@@ -1,0 +1,13 @@
+:root {
+  --s-radius-sm: 2px;
+  --s-radius-md: 4px;
+  --s-radius-lg: 8px;
+  --s-radius-full: 999px;
+
+  --s-shadow-sm: 0 1px 2px rgba(17, 17, 17, 0.06);
+  --s-shadow-md: 0 4px 10px rgba(17, 17, 17, 0.08);
+
+  --s-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --s-duration-fast: 100ms;
+  --s-duration-base: 180ms;
+}

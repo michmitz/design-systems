@@ -1,0 +1,24 @@
+/* Renders Voltage's type scale without going through tokens/typography.css's
+   own `@import` (Google Fonts) — see hearth/typography-vars.css for why.
+   Mirrors typography.css's `:root` block verbatim, minus that `@import` line,
+   with the font-family variables pointed at the self-hosted output from
+   fonts.ts instead of the literal family names. tokens/typography.css itself
+   stays untouched as the portable source of truth. Keep this in sync by hand. */
+:root {
+  --v-font-display: var(--v-font-archivo), system-ui, sans-serif;
+  --v-font-body: var(--v-font-archivo), system-ui, sans-serif;
+  --v-font-mono: var(--v-font-space-mono), ui-monospace, monospace;
+
+  --v-text-display-1: 800 4.5rem/1.0 var(--v-font-display);
+  --v-text-display-2: 800 3rem/1.05 var(--v-font-display);
+  --v-text-h1: 800 2.5rem/1.1 var(--v-font-display);
+  --v-text-h2: 700 2rem/1.2 var(--v-font-display);
+  --v-text-h3: 700 1.5rem/1.3 var(--v-font-display);
+  --v-text-body-lg: 500 1.125rem/1.6 var(--v-font-body);
+  --v-text-body: 500 1rem/1.6 var(--v-font-body);
+  --v-text-small: 500 0.875rem/1.5 var(--v-font-body);
+  --v-text-caption: 700 0.75rem/1.3 var(--v-font-body);
+  --v-text-mono: 400 0.9rem/1.5 var(--v-font-mono);
+
+  --v-tracking-caption: 0.08em;
+}

@@ -1,0 +1,16 @@
+:root {
+  --v-radius-sm: 10px;
+  --v-radius-md: 16px;
+  --v-radius-lg: 28px;
+  --v-radius-full: 999px;
+
+  --v-shadow-pop-sm: 3px 3px 0 rgba(0, 0, 0, 0.9);
+  --v-shadow-pop-md: 6px 6px 0 rgba(0, 0, 0, 0.9);
+  --v-shadow-pop-lg: 10px 10px 0 rgba(0, 0, 0, 0.9);
+  --v-shadow-glow: 0 0 24px rgba(198, 255, 61, 0.35);
+
+  --v-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --v-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --v-duration-fast: 120ms;
+  --v-duration-base: 200ms;
+}

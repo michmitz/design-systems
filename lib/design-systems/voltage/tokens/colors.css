@@ -1,0 +1,51 @@
+:root {
+  --v-bg-page: #0A0A0F;
+  --v-bg-surface: #15151D;
+  --v-bg-surface-raised: #1D1D28;
+  --v-bg-sunk: #050507;
+
+  --v-ink-0: #F7F7FA;
+  --v-ink-300: #C4C4D1;
+  --v-ink-500: #8A8A9B;
+  --v-ink-700: #55555F;
+
+  --v-lime-300: #E4FF9C;
+  --v-lime-400: #D4FF3F;
+  --v-lime-500: #C6FF3D;
+  --v-lime-600: #A8DE1F;
+
+  --v-pink-300: #FFB3EA;
+  --v-pink-400: #FF6FD8;
+  --v-pink-500: #FF3CAC;
+  --v-pink-600: #E0189A;
+
+  --v-cyan-300: #A8F2FF;
+  --v-cyan-400: #6FE8FF;
+  --v-cyan-500: #00E5FF;
+  --v-cyan-600: #00B8CC;
+
+  --v-yellow-500: #FFD23C;
+  --v-red-500: #FF4D4D;
+  --v-green-500: #3CFFA0;
+
+  --v-text-primary: var(--v-ink-0);
+  --v-text-secondary: var(--v-ink-300);
+  --v-text-muted: var(--v-ink-500);
+  --v-text-on-accent: #0A0A0F;
+
+  --v-accent-primary: var(--v-lime-500);
+  --v-accent-primary-hover: var(--v-lime-400);
+  --v-accent-primary-active: var(--v-lime-600);
+
+  --v-accent-secondary: var(--v-pink-500);
+  --v-accent-tertiary: var(--v-cyan-500);
+
+  --v-status-success: var(--v-green-500);
+  --v-status-warning: var(--v-yellow-500);
+  --v-status-danger: var(--v-red-500);
+  --v-status-info: var(--v-cyan-500);
+
+  --v-border-hairline: rgba(247, 247, 250, 0.14);
+  --v-border-strong: rgba(247, 247, 250, 0.28);
+  --v-border-accent: var(--v-lime-500);
+}
