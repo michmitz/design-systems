@@ -54,7 +54,7 @@ export const galleryCards: GalleryCard[] = [
   {
     slug: "voltage",
     href: "/voltage",
-    name: "Voltage",
+    name: "VOLTAGE",
     description: "Loud, dark-mode-first foundations — neon lime, pink & cyan on near-black.",
     swatches: ["#C6FF3D", "#FF3CAC", "#00E5FF", "#0A0A0F"],
     swatchStripBackground: "#0A0A0F",
