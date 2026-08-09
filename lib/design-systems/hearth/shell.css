@@ -1,0 +1,16 @@
+/* Site-chrome-level styles for pages themed with Hearth: page background,
+   default text color/font, and link colors. Used by (hearth)'s root layout,
+   which covers both the gallery and the Hearth detail page. */
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+a {
+  color: var(--accent-primary);
+}
+
+a:hover {
+  color: var(--accent-primary-hover);
+}

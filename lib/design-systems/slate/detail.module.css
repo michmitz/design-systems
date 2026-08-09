@@ -1,0 +1,125 @@
+.page {
+  min-height: 100vh;
+  padding: var(--s-space-8) var(--s-space-6) var(--s-space-10);
+}
+
+.container {
+  max-width: var(--s-container-max);
+  margin: 0 auto;
+}
+
+.backLink {
+  font: var(--s-text-small);
+  color: var(--s-text-muted);
+  text-decoration: none;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--s-space-6);
+  margin-top: var(--s-space-4);
+  margin-bottom: var(--s-space-8);
+  flex-wrap: wrap;
+}
+
+.name {
+  font: var(--s-text-display-1);
+  letter-spacing: var(--s-tracking-display);
+  color: var(--s-text-primary);
+}
+
+.tagline {
+  font: var(--s-text-body-lg);
+  color: var(--s-text-secondary);
+}
+
+.downloadButton {
+  font: var(--s-text-body);
+  background: var(--s-accent-primary);
+  color: var(--s-text-on-accent);
+  border: none;
+  border-radius: var(--s-radius-md);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: background var(--s-duration-base) var(--s-ease-standard);
+}
+
+.downloadButton:hover {
+  background: var(--s-accent-primary-hover);
+}
+
+.sectionHeading {
+  font: var(--s-text-h2);
+  color: var(--s-text-primary);
+  margin-bottom: var(--s-space-4);
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--s-space-3);
+  margin-bottom: var(--s-space-8);
+}
+
+.swatch {
+  height: 64px;
+  border-radius: var(--s-radius-sm);
+  border: 1px solid var(--s-border-hairline);
+}
+
+.swatchCaption {
+  font: var(--s-text-caption);
+  color: var(--s-text-secondary);
+  margin-top: 6px;
+}
+
+.typeCard {
+  background: var(--s-bg-surface-raised);
+  border: 1px solid var(--s-border-hairline);
+  border-radius: var(--s-radius-lg);
+  padding: var(--s-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-space-3);
+  margin-bottom: var(--s-space-8);
+}
+
+.displaySample {
+  font: var(--s-text-display-2);
+  letter-spacing: var(--s-tracking-display);
+  color: var(--s-text-primary);
+}
+
+.fontDescription {
+  font: var(--s-text-h2);
+  color: var(--s-text-primary);
+}
+
+.bodySample {
+  font: var(--s-text-body);
+  color: var(--s-text-secondary);
+}
+
+.monoLabel {
+  font: var(--s-text-mono);
+  color: var(--s-text-muted);
+}
+
+.effectsRow {
+  display: flex;
+  gap: var(--s-space-6);
+  flex-wrap: wrap;
+  margin-bottom: var(--s-space-4);
+}
+
+.effectsBox {
+  width: 100px;
+  height: 100px;
+}
+
+.effectsCaption {
+  font: var(--s-text-small);
+  color: var(--s-text-muted);
+}

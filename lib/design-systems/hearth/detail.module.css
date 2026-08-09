@@ -1,0 +1,124 @@
+.page {
+  min-height: 100vh;
+  padding: var(--space-8) var(--space-6) var(--space-10);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.backLink {
+  font: var(--text-small);
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.name {
+  font: var(--text-display-1);
+  color: var(--text-primary);
+}
+
+.tagline {
+  font: var(--text-body-lg);
+  color: var(--accent-primary);
+}
+
+.downloadButton {
+  font: var(--text-body);
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease-standard);
+}
+
+.downloadButton:hover {
+  background: var(--accent-primary-hover);
+}
+
+.sectionHeading {
+  font: var(--text-h2);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.colorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.swatch {
+  height: 64px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.swatchCaption {
+  font: var(--text-caption);
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.typeCard {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+}
+
+.displaySample {
+  font: var(--text-display-2);
+  color: var(--text-primary);
+}
+
+.fontDescription {
+  font: var(--text-h2);
+  color: var(--text-primary);
+}
+
+.bodySample {
+  font: var(--text-body);
+  color: var(--text-secondary);
+}
+
+.monoLabel {
+  font: var(--text-mono);
+  color: var(--text-muted);
+}
+
+.effectsRow {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.effectsBox {
+  width: 100px;
+  height: 100px;
+}
+
+.effectsCaption {
+  font: var(--text-small);
+  color: var(--text-muted);
+}
