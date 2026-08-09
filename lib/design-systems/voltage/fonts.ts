@@ -3,6 +3,12 @@
 // own `@import`. Weights match that file's Google Fonts URL exactly.
 import { Archivo, Space_Mono } from "next/font/google";
 
+// next/font's compiler plugin requires each loader call's options to be
+// inline literals, so the variable name is duplicated below rather than
+// referencing these constants directly — keep the two in sync by hand.
+export const ARCHIVO_VAR = "--v-font-archivo";
+export const SPACE_MONO_VAR = "--v-font-space-mono";
+
 export const archivo = Archivo({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],

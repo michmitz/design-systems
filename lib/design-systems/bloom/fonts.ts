@@ -7,6 +7,12 @@
 // what the reference strictly asks for, traded for one unified font-family.
 import { IBM_Plex_Mono, Nunito } from "next/font/google";
 
+// next/font's compiler plugin requires each loader call's options to be
+// inline literals, so the variable name is duplicated below rather than
+// referencing these constants directly — keep the two in sync by hand.
+export const NUNITO_VAR = "--b-font-nunito";
+export const IBM_PLEX_MONO_VAR = "--b-font-ibm-plex-mono";
+
 export const nunito = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

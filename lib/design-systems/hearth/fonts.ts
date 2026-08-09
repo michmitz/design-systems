@@ -9,6 +9,13 @@
 // globals.css instead, matching the same families/weights/styles.
 import { Figtree, IBM_Plex_Mono, Newsreader } from "next/font/google";
 
+// next/font's compiler plugin requires each loader call's options to be
+// inline literals, so the variable name is duplicated below rather than
+// referencing these constants directly — keep the two in sync by hand.
+export const NEWSREADER_VAR = "--font-newsreader";
+export const FIGTREE_VAR = "--font-figtree";
+export const IBM_PLEX_MONO_VAR = "--font-ibm-plex-mono";
+
 export const newsreader = Newsreader({
   subsets: ["latin"],
   weight: ["400", "500", "600"],

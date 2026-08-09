@@ -17,7 +17,7 @@ export default function GalleryPage() {
             <Link
               key={card.slug}
               href={card.href}
-              className={styles.card}
+              className={`${styles.card} ${card.fontVariableClassName ?? ""}`}
               style={{
                 background: card.cardBackground,
                 border: card.cardBorder,

@@ -1,0 +1,15 @@
+/* Site-chrome-level styles for the Slate detail page: page background,
+   default text color/font, and link colors. Used by (slate)'s root layout. */
+body {
+  background: var(--s-bg-page);
+  color: var(--s-text-primary);
+  font-family: var(--s-font-body);
+}
+
+a {
+  color: var(--s-accent-primary);
+}
+
+a:hover {
+  color: var(--s-accent-primary-hover);
+}

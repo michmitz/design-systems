@@ -1,10 +1,20 @@
 // Card content + styling for the gallery ("/") page.
 //
-// Only Hearth's tokens are loaded site-wide (see app/globals.css), so the Hearth
-// card below is styled with `var(--...)` references while the other three systems'
-// cards use literal values straight from reference/Design Systems.dc.html — their
-// own prefixed token sets (--v-*, --s-*, --b-*) are scoped to their detail pages,
-// not the gallery shell.
+// Only Hearth's tokens/fonts are loaded site-wide (see app/globals.css and
+// app/layout.tsx), so the Hearth card is styled with `var(--...)` references
+// straight off the global tokens. The other three systems' full token sets
+// (--v-*, --s-*, --b-*) are scoped to their own detail pages, not the gallery
+// shell — but each card's title deliberately previews that system's own
+// display font (deviating from reference/Design Systems.dc.html, which
+// hardcodes Figtree for every card title). Each card that isn't Hearth
+// carries its own `fontVariableClassName`: the next/font variable class that
+// has to be applied to that card's own DOM subtree for `titleFont`'s
+// var() reference to resolve — see voltage/slate/bloom's fonts.ts.
+import { ARCHIVO_VAR, archivo } from "@/lib/design-systems/voltage/fonts";
+import { WORK_SANS_VAR, workSans } from "@/lib/design-systems/slate/fonts";
+import { NUNITO_VAR, nunito } from "@/lib/design-systems/bloom/fonts";
+import { NEWSREADER_VAR } from "@/lib/design-systems/hearth/fonts";
+
 export type GalleryCard = {
   slug: "hearth" | "voltage" | "slate" | "bloom";
   href: string;
@@ -15,8 +25,10 @@ export type GalleryCard = {
   cardBackground: string;
   cardBorder: string;
   titleColor: string;
-  /** CSS `font` shorthand override for the card title; omit to use Hearth's --text-h3. */
-  titleFont?: string;
+  /** CSS `font` shorthand for the card title, in that system's own display font. */
+  titleFont: string;
+  /** next/font variable class to apply to the card so titleFont's var() resolves. */
+  fontVariableClassName?: string;
   descriptionColor: string;
 };
 
@@ -35,6 +47,8 @@ export const galleryCards: GalleryCard[] = [
     cardBackground: "var(--bg-surface-raised)",
     cardBorder: "1px solid var(--border-hairline)",
     titleColor: "var(--text-primary)",
+    // Hearth's fonts are already global (root layout), so no fontVariableClassName needed.
+    titleFont: `600 1.375rem/1.3 var(${NEWSREADER_VAR}), 'Iowan Old Style', Georgia, serif`,
     descriptionColor: "var(--text-muted)",
   },
   {
@@ -47,7 +61,8 @@ export const galleryCards: GalleryCard[] = [
     cardBackground: "#15151D",
     cardBorder: "1px solid rgba(247, 247, 250, 0.14)",
     titleColor: "#F7F7FA",
-    titleFont: "800 1.375rem/1.3 'Figtree', sans-serif",
+    titleFont: `800 1.375rem/1.3 var(${ARCHIVO_VAR}), system-ui, sans-serif`,
+    fontVariableClassName: archivo.variable,
     descriptionColor: "#8A8A9B",
   },
   {
@@ -60,7 +75,8 @@ export const galleryCards: GalleryCard[] = [
     cardBackground: "#FFFFFF",
     cardBorder: "1px solid rgba(17, 17, 17, 0.14)",
     titleColor: "#111111",
-    titleFont: "700 1.375rem/1.3 'Figtree', sans-serif",
+    titleFont: `700 1.375rem/1.3 var(${WORK_SANS_VAR}), system-ui, sans-serif`,
+    fontVariableClassName: workSans.variable,
     descriptionColor: "#6B6B6B",
   },
   {
@@ -73,7 +89,8 @@ export const galleryCards: GalleryCard[] = [
     cardBackground: "#FFFBFE",
     cardBorder: "1px solid rgba(61, 53, 82, 0.10)",
     titleColor: "#3D3552",
-    titleFont: "700 1.375rem/1.3 'Figtree', sans-serif",
+    titleFont: `700 1.375rem/1.3 var(${NUNITO_VAR}), system-ui, sans-serif`,
+    fontVariableClassName: nunito.variable,
     descriptionColor: "#8A8098",
   },
 ];
