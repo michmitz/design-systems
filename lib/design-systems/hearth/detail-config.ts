@@ -2,6 +2,7 @@ import type { DesignSystemDetailConfig } from "@/components/DesignSystemDetail";
 
 // Content + swatch list copied verbatim from reference/Hearth.dc.html.
 export const hearthDetailConfig: DesignSystemDetailConfig = {
+  slug: "hearth",
   name: "Hearth",
   tagline: "warm, unhurried, hand-finished",
   taglineItalic: true,
@@ -30,4 +31,6 @@ export const hearthDetailConfig: DesignSystemDetailConfig = {
   effectsCaption:
     "Spacing scale runs 4 → 128px; shadows are warm-tinted (ink, not black); easing is calm — no bounce.",
   downloadLabel: "Download tokens",
+  downloadPreparingLabel: "Preparing…",
+  downloadErrorLabel: "Download failed",
 };

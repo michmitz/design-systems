@@ -1,9 +1,12 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { DownloadButton } from "./DownloadButton";
 
 export type ColorSwatch = { name: string; hex: string };
 
 export type DesignSystemDetailConfig = {
+  /** Matches app/api/download/[system]/route.ts's allowed slugs. */
+  slug: "hearth" | "voltage" | "slate" | "bloom";
   name: string;
   tagline: string;
   taglineItalic?: boolean;
@@ -16,6 +19,8 @@ export type DesignSystemDetailConfig = {
   effectsBoxes: [CSSProperties, CSSProperties, CSSProperties];
   effectsCaption: string;
   downloadLabel: string;
+  downloadPreparingLabel: string;
+  downloadErrorLabel: string;
 };
 
 /**
@@ -39,8 +44,6 @@ export type DesignSystemDetailClasses = Record<string, string>;
 // Shared structure for all four systems' detail pages (Screens section,
 // item 2, in the README) — content and every visual value come from
 // `config`/`classes`, driven by a per-system CSS Module + config object.
-// The "Download tokens" button renders here but isn't wired up yet — zip
-// generation is a later step.
 export function DesignSystemDetail({
   config,
   classes,
@@ -65,9 +68,13 @@ export function DesignSystemDetail({
               {config.tagline}
             </div>
           </div>
-          <button type="button" className={classes.downloadButton}>
-            {config.downloadLabel}
-          </button>
+          <DownloadButton
+            system={config.slug}
+            idleLabel={config.downloadLabel}
+            preparingLabel={config.downloadPreparingLabel}
+            errorLabel={config.downloadErrorLabel}
+            className={classes.downloadButton}
+          />
         </div>
 
         <div className={classes.sectionHeading}>Colors</div>
