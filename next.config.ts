@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
     // compose a 404 page from. See app/global-not-found.tsx.
     globalNotFound: true,
   },
+  // The download route reads token/readme files via fs at request time
+  // (app/api/download/[system]/route.ts) rather than importing them as
+  // modules, so Next's automatic output file tracing may not detect them on
+  // serverless deployments — make the include explicit as a safety net.
+  outputFileTracingIncludes: {
+    "/api/download/\\[system\\]": ["./lib/design-systems/**/*.css", "./lib/design-systems/**/*.md"],
+  },
 };
 
 export default nextConfig;

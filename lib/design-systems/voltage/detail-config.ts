@@ -3,6 +3,7 @@ import type { DesignSystemDetailConfig } from "@/components/DesignSystemDetail";
 // Content + swatch list copied verbatim from reference/Voltage.dc.html —
 // including the uppercase "VOLTAGE"/"DOWNLOAD TOKENS" literal text.
 export const voltageDetailConfig: DesignSystemDetailConfig = {
+  slug: "voltage",
   name: "VOLTAGE",
   tagline: "loud, fast, wired for fun",
   colorSwatches: [
@@ -43,4 +44,6 @@ export const voltageDetailConfig: DesignSystemDetailConfig = {
   effectsCaption:
     'Spacing scale runs 4 → 128px; shadows are hard offset "pop" shapes, not soft blurs; easing overshoots on hover for a bouncy, arcade feel.',
   downloadLabel: "DOWNLOAD TOKENS",
+  downloadPreparingLabel: "PREPARING…",
+  downloadErrorLabel: "DOWNLOAD FAILED",
 };

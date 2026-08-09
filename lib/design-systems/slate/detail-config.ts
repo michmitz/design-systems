@@ -2,6 +2,7 @@ import type { DesignSystemDetailConfig } from "@/components/DesignSystemDetail";
 
 // Content + swatch list copied verbatim from reference/Slate.dc.html.
 export const slateDetailConfig: DesignSystemDetailConfig = {
+  slug: "slate",
   name: "Slate",
   tagline: "precise, quiet, no color needed",
   colorSwatches: [
@@ -39,4 +40,6 @@ export const slateDetailConfig: DesignSystemDetailConfig = {
   effectsCaption:
     "Spacing scale runs 4 → 128px; hairline borders (not shadows) separate surfaces; easing is linear-ish and fast — no bounce.",
   downloadLabel: "Download tokens",
+  downloadPreparingLabel: "Preparing…",
+  downloadErrorLabel: "Download failed",
 };

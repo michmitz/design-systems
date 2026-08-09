@@ -2,6 +2,7 @@ import type { DesignSystemDetailConfig } from "@/components/DesignSystemDetail";
 
 // Content + swatch list copied verbatim from reference/Bloom.dc.html.
 export const bloomDetailConfig: DesignSystemDetailConfig = {
+  slug: "bloom",
   name: "Bloom",
   tagline: "soft, sweet, unhurried",
   colorSwatches: [
@@ -28,4 +29,6 @@ export const bloomDetailConfig: DesignSystemDetailConfig = {
   effectsCaption:
     "Spacing scale runs 4 → 128px; shadows are soft and pastel-tinted; easing gently overshoots on hover for a light, floaty feel.",
   downloadLabel: "Download tokens",
+  downloadPreparingLabel: "Preparing…",
+  downloadErrorLabel: "Download failed",
 };
