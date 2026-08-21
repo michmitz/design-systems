@@ -15,10 +15,11 @@
 import { ARCHIVO_VAR, archivo } from "@/lib/design-systems/voltage/fonts";
 import { WORK_SANS_VAR, workSans } from "@/lib/design-systems/slate/fonts";
 import { NUNITO_VAR, nunito } from "@/lib/design-systems/bloom/fonts";
+import { COMFORTAA_VAR, comfortaa } from "@/lib/design-systems/bluebird/fonts";
 import { NEWSREADER_VAR } from "@/lib/design-systems/hearth/fonts";
 
 export type GalleryCard = {
-  slug: "hearth" | "voltage" | "slate" | "bloom";
+  slug: "hearth" | "voltage" | "slate" | "bloom" | "bluebird";
   href: string;
   name: string;
   description: string;
@@ -109,5 +110,24 @@ export const galleryCards: GalleryCard[] = [
     titleFont: `700 1.375rem/1.3 var(${NUNITO_VAR}), system-ui, sans-serif`,
     fontVariableClassName: nunito.variable,
     descriptionColor: "var(--b-text-muted)",
+  },
+  {
+    slug: "bluebird",
+    href: "/bluebird",
+    name: "bluebird",
+    description: "Bubbly · Spring · Joyful",
+    swatches: [
+      "var(--bb-sky-500)",
+      "var(--bb-sun-500)",
+      "var(--bb-rust-500)",
+      "var(--bb-bg-page)",
+    ],
+    swatchStripBackground: "var(--bb-bg-page)",
+    cardBackground: "var(--bb-bg-page)",
+    cardBorder: "1px solid var(--bb-border-hairline)",
+    titleColor: "var(--bb-text-primary)",
+    titleFont: `700 1.375rem/1.3 var(${COMFORTAA_VAR}), system-ui, sans-serif`,
+    fontVariableClassName: comfortaa.variable,
+    descriptionColor: "var(--bb-text-muted)",
   },
 ];

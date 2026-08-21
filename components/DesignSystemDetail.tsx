@@ -8,7 +8,7 @@ export type ColorSwatch = { name: string; value: string };
 
 export type DesignSystemDetailConfig = {
   /** Matches app/api/download/[system]/route.ts's allowed slugs. */
-  slug: "hearth" | "voltage" | "slate" | "bloom";
+  slug: "hearth" | "voltage" | "slate" | "bloom" | "bluebird";
   name: string;
   tagline: string;
   taglineItalic?: boolean;

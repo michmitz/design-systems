@@ -1,0 +1,134 @@
+.hero {
+  margin-bottom: var(--bb-space-9);
+}
+
+.heroLine {
+  font: var(--bb-text-display-1);
+  color: var(--bb-text-primary);
+  margin: var(--bb-space-2) 0;
+}
+
+.heroPill {
+  display: inline-block;
+  background: var(--bb-accent-primary);
+  color: var(--bb-text-on-accent);
+  padding: 0 var(--bb-space-5);
+  border-radius: var(--bb-radius-full);
+  box-shadow: var(--bb-shadow-glow);
+}
+
+.heroCaption {
+  font: var(--bb-text-body);
+  color: var(--bb-text-secondary);
+  margin-top: var(--bb-space-5);
+  max-width: 34ch;
+}
+
+.sectionHeading {
+  font: var(--bb-text-caption);
+  letter-spacing: var(--bb-tracking-caption);
+  color: var(--bb-text-secondary);
+  margin-bottom: var(--bb-space-4);
+}
+
+/* Circles you explore by hovering, each lifted a little higher than the
+   last — a rising flight path rather than a static cluster (this system's
+   own answer to DESIGN-DIRECTION.md §4's "colors as shapes, not a grid"). */
+.flightPath {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--bb-space-3);
+  padding: var(--bb-space-7) 0 var(--bb-space-8);
+  margin-bottom: var(--bb-space-9);
+  flex-wrap: wrap;
+}
+
+.swatch {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--bb-radius-full);
+  box-shadow: var(--bb-shadow-md);
+  position: relative;
+  cursor: default;
+  transition:
+    transform var(--bb-duration-base) var(--bb-ease-bounce),
+    box-shadow var(--bb-duration-base) var(--bb-ease-bounce);
+}
+
+.swatch:hover {
+  transform: scale(1.18) translateY(-8px);
+  box-shadow: var(--bb-shadow-lg);
+  z-index: 1;
+}
+
+.swatchLabel {
+  font: var(--bb-text-caption);
+  letter-spacing: var(--bb-tracking-caption);
+  color: var(--bb-text-primary);
+  text-align: center;
+  padding: 0 var(--bb-space-2);
+  opacity: 0;
+  transition: opacity var(--bb-duration-fast) var(--bb-ease-standard);
+}
+
+.swatchLabelOnDark {
+  color: var(--bb-white);
+}
+
+.swatch:hover .swatchLabel {
+  opacity: 1;
+}
+
+/* Small UI examples using the actual tokens — button, badge, input. */
+.uiRow {
+  display: flex;
+  align-items: center;
+  gap: var(--bb-space-5);
+  flex-wrap: wrap;
+  margin-bottom: var(--bb-space-9);
+}
+
+.demoButton {
+  font: var(--bb-text-h3);
+  background: var(--bb-accent-primary);
+  color: var(--bb-text-on-accent);
+  border: none;
+  border-radius: var(--bb-radius-full);
+  padding: 14px 28px;
+  cursor: pointer;
+  box-shadow: var(--bb-shadow-md);
+  transition:
+    transform var(--bb-duration-base) var(--bb-ease-bounce),
+    box-shadow var(--bb-duration-base) var(--bb-ease-bounce);
+}
+
+.demoButton:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: var(--bb-shadow-lg);
+}
+
+.demoBadge {
+  font: var(--bb-text-caption);
+  letter-spacing: var(--bb-tracking-caption);
+  background: var(--bb-accent-secondary);
+  color: var(--bb-ink-900);
+  border-radius: var(--bb-radius-full);
+  padding: 8px 16px;
+}
+
+.demoInput {
+  font: var(--bb-text-body);
+  color: var(--bb-text-muted);
+  background: var(--bb-bg-surface-raised);
+  border: 1px solid var(--bb-border-hairline);
+  border-radius: var(--bb-radius-lg);
+  padding: 10px 20px;
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.footnote {
+  font: var(--bb-text-small);
+  color: var(--bb-text-muted);
+}

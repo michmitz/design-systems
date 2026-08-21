@@ -7,7 +7,7 @@ import JSZip from "jszip";
 // in your own zip approach server-side"). Reading files here means the
 // client never needs to ship a zip library, and the button just downloads
 // whatever this route returns.
-const SYSTEMS = ["hearth", "voltage", "slate", "bloom"] as const;
+const SYSTEMS = ["hearth", "voltage", "slate", "bloom", "bluebird"] as const;
 type System = (typeof SYSTEMS)[number];
 
 function isSystem(value: string): value is System {

@@ -1,0 +1,15 @@
+/* Site-chrome-level styles for the bluebird detail page: page background,
+   default text color/font, and link colors. Used by (bluebird)'s root layout. */
+body {
+  background: var(--bb-bg-page);
+  color: var(--bb-text-primary);
+  font-family: var(--bb-font-body);
+}
+
+a {
+  color: var(--bb-accent-primary);
+}
+
+a:hover {
+  color: var(--bb-accent-primary-hover);
+}
