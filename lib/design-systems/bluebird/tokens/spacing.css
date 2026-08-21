@@ -1,0 +1,14 @@
+:root {
+  --bb-space-1: 4px;
+  --bb-space-2: 8px;
+  --bb-space-3: 12px;
+  --bb-space-4: 16px;
+  --bb-space-5: 24px;
+  --bb-space-6: 32px;
+  --bb-space-7: 48px;
+  --bb-space-8: 64px;
+  --bb-space-9: 96px;
+
+  --bb-container-max: 1080px;
+  --bb-gutter: var(--bb-space-5);
+}

@@ -1,0 +1,60 @@
+/* bluebird detail page's outer chrome — back link, header, download button.
+   Shared mechanics (DetailShell), styled as bluebird. The specimen itself
+   lives in specimen.module.css. */
+
+.page {
+  min-height: 100vh;
+  padding: var(--bb-space-8) var(--bb-space-6) var(--bb-space-9);
+}
+
+.container {
+  max-width: var(--bb-container-max);
+  margin: 0 auto;
+}
+
+.backLink {
+  font: var(--bb-text-small);
+  color: var(--bb-text-muted);
+  text-decoration: none;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--bb-space-6);
+  margin-top: var(--bb-space-4);
+  margin-bottom: var(--bb-space-9);
+  flex-wrap: wrap;
+}
+
+.name {
+  font: var(--bb-text-display-1);
+  color: var(--bb-text-primary);
+}
+
+.tagline {
+  font: var(--bb-text-body-lg);
+  color: var(--bb-accent-primary-hover);
+}
+
+.downloadButton {
+  font: var(--bb-text-body);
+  background: var(--bb-accent-primary);
+  color: var(--bb-text-on-accent);
+  border: none;
+  border-radius: var(--bb-radius-full);
+  padding: 14px 28px;
+  cursor: pointer;
+  box-shadow: var(--bb-shadow-md);
+  transition:
+    transform var(--bb-duration-base) var(--bb-ease-bounce),
+    box-shadow var(--bb-duration-base) var(--bb-ease-bounce),
+    background var(--bb-duration-base) var(--bb-ease-standard);
+}
+
+.downloadButton:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bb-shadow-lg);
+  background: var(--bb-accent-primary-hover);
+}
