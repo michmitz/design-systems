@@ -1,3 +1,7 @@
+/* Voltage detail page's outer chrome — back link, header, download button.
+   Shared mechanics (DetailShell), styled as Voltage. The specimen itself
+   lives in specimen.module.css. */
+
 .page {
   min-height: 100vh;
   padding: var(--v-space-8) var(--v-space-6) var(--v-space-10);
@@ -20,7 +24,7 @@
   align-items: flex-end;
   gap: var(--v-space-6);
   margin-top: var(--v-space-4);
-  margin-bottom: var(--v-space-8);
+  margin-bottom: var(--v-space-9);
   flex-wrap: wrap;
 }
 
@@ -51,80 +55,4 @@
 .downloadButton:hover {
   transform: translate(-3px, -3px);
   box-shadow: var(--v-shadow-pop-lg);
-}
-
-.sectionHeading {
-  font: var(--v-text-h2);
-  color: var(--v-text-primary);
-  margin-bottom: var(--v-space-4);
-}
-
-.colorGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: var(--v-space-3);
-  margin-bottom: var(--v-space-8);
-}
-
-.swatch {
-  height: 64px;
-  border-radius: var(--v-radius-md);
-  border: 2px solid var(--v-ink-0);
-}
-
-.swatchCaption {
-  font: var(--v-text-caption);
-  letter-spacing: var(--v-tracking-caption);
-  text-transform: uppercase;
-  color: var(--v-text-secondary);
-  margin-top: 6px;
-}
-
-.typeCard {
-  background: var(--v-bg-surface-raised);
-  border: 2px solid var(--v-ink-0);
-  border-radius: var(--v-radius-lg);
-  box-shadow: var(--v-shadow-pop-md);
-  padding: var(--v-space-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--v-space-3);
-  margin-bottom: var(--v-space-8);
-}
-
-.displaySample {
-  font: var(--v-text-display-2);
-  color: var(--v-text-primary);
-}
-
-.fontDescription {
-  font: var(--v-text-h2);
-  color: var(--v-text-primary);
-}
-
-.bodySample {
-  font: var(--v-text-body);
-  color: var(--v-text-secondary);
-}
-
-.monoLabel {
-  font: var(--v-text-mono);
-  color: var(--v-text-muted);
-}
-
-.effectsRow {
-  display: flex;
-  gap: var(--v-space-6);
-  flex-wrap: wrap;
-  margin-bottom: var(--v-space-4);
-}
-
-.effectsBox {
-  width: 100px;
-  height: 100px;
-}
-
-.effectsCaption {
-  font: var(--v-text-small);
-  color: var(--v-text-muted);
 }
