@@ -4,6 +4,17 @@ import "../globals.css";
 import "@/lib/design-systems/hearth/styles.css";
 import "@/lib/design-systems/hearth/typography-vars.css";
 import "@/lib/design-systems/hearth/shell.css";
+// Colors-only (no @import, no body-level rules) from the other three
+// systems, loaded here purely so the gallery card in gallery-data.ts can
+// reference their real `--v-*`/`--s-*`/`--b-*` tokens with var() instead of
+// hand-copied hex. Their prefixes don't collide with each other or with
+// Hearth's unprefixed --color-*/--bg-*/--text-* names, so all four token
+// sets can coexist at :root on this one page. Fonts/typography/effects
+// still only load on each system's own route (see those layouts) — this is
+// deliberately scoped to colors, the one category the gallery card needs.
+import "@/lib/design-systems/voltage/tokens/colors.css";
+import "@/lib/design-systems/slate/tokens/colors.css";
+import "@/lib/design-systems/bloom/tokens/colors.css";
 
 // Root layout for the gallery ("/") and the Hearth detail page ("/hearth") —
 // grouped together because both are themed with Hearth, the site's default

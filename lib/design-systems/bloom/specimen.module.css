@@ -1,0 +1,149 @@
+/* Bloom's own specimen composition — soft/playful: overlapping color blobs
+   and rounded controls, instead of the generic card-grid Colors/Type/Effects
+   layout. Every value below is a --b-* token; nothing here is a hardcoded
+   visual value. */
+
+.hero {
+  margin-bottom: var(--b-space-9);
+}
+
+.heroLine {
+  font: var(--b-text-display-1);
+  color: var(--b-text-primary);
+  margin: var(--b-space-2) 0;
+}
+
+.heroPill {
+  display: inline-block;
+  background: var(--b-accent-primary);
+  color: var(--b-text-on-accent);
+  padding: 0 var(--b-space-5);
+  border-radius: var(--b-radius-full);
+  box-shadow: var(--b-shadow-glow);
+}
+
+.heroCaption {
+  font: var(--b-text-body);
+  color: var(--b-text-secondary);
+  margin-top: var(--b-space-5);
+  max-width: 34ch;
+}
+
+.sectionHeading {
+  font: var(--b-text-caption);
+  letter-spacing: var(--b-tracking-caption);
+  text-transform: uppercase;
+  color: var(--b-text-secondary);
+  margin-bottom: var(--b-space-4);
+}
+
+/* Overlapping circles you explore by hovering — colors as shapes, not a
+   grid of cards (DESIGN-DIRECTION.md §4's own example for a playful set). */
+.blobCluster {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--b-space-6) 0 var(--b-space-8);
+  margin-bottom: var(--b-space-9);
+}
+
+.blob {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--b-radius-full);
+  box-shadow: var(--b-shadow-md);
+  margin-left: -22px;
+  position: relative;
+  cursor: default;
+  transition:
+    transform var(--b-duration-base) var(--b-ease-soft),
+    box-shadow var(--b-duration-base) var(--b-ease-soft);
+}
+
+.blob:first-child {
+  margin-left: 0;
+}
+
+.blob:nth-child(even) {
+  margin-top: 28px;
+}
+
+.blob:hover {
+  transform: scale(1.12) translateY(-6px);
+  box-shadow: var(--b-shadow-lg);
+  z-index: 1;
+}
+
+.blobLabel {
+  font: var(--b-text-caption);
+  letter-spacing: var(--b-tracking-caption);
+  text-transform: uppercase;
+  color: var(--b-text-primary);
+  text-align: center;
+  padding: 0 var(--b-space-2);
+  opacity: 0;
+  transition: opacity var(--b-duration-fast) var(--b-ease-standard);
+}
+
+.blobLabelOnDark {
+  color: var(--b-white);
+}
+
+.blob:hover .blobLabel {
+  opacity: 1;
+}
+
+/* Small UI examples using the actual tokens — button, badge, input. */
+.uiRow {
+  display: flex;
+  align-items: center;
+  gap: var(--b-space-5);
+  flex-wrap: wrap;
+  margin-bottom: var(--b-space-9);
+}
+
+.demoButton {
+  font: var(--b-text-h3);
+  background: var(--b-accent-primary);
+  color: var(--b-text-on-accent);
+  border: none;
+  border-radius: var(--b-radius-full);
+  padding: 14px 28px;
+  cursor: pointer;
+  box-shadow: var(--b-shadow-md);
+  transition:
+    transform var(--b-duration-base) var(--b-ease-soft),
+    box-shadow var(--b-duration-base) var(--b-ease-soft);
+}
+
+.demoButton:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: var(--b-shadow-lg);
+}
+
+.demoBadge {
+  font: var(--b-text-caption);
+  letter-spacing: var(--b-tracking-caption);
+  text-transform: uppercase;
+  background: var(--b-accent-secondary);
+  color: var(--b-text-on-accent);
+  border-radius: var(--b-radius-full);
+  padding: 8px 16px;
+}
+
+.demoInput {
+  font: var(--b-text-body);
+  color: var(--b-text-muted);
+  background: var(--b-bg-surface-raised);
+  border: 1px solid var(--b-border-hairline);
+  border-radius: var(--b-radius-lg);
+  padding: 10px 20px;
+  box-shadow: var(--b-shadow-sm);
+}
+
+.footnote {
+  font: var(--b-text-small);
+  color: var(--b-text-muted);
+}

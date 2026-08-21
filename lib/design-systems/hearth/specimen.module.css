@@ -1,0 +1,145 @@
+/* Hearth's own specimen composition — editorial: an enormous serif hero,
+   colors set as type rather than swatches, and a two-column magazine
+   spread, instead of the generic card-grid Colors/Type/Effects layout.
+   Every value below is a --color-*, --text-*, or --space-* token; nothing
+   here is a hardcoded visual value. */
+
+.hero {
+  max-width: 44rem;
+  margin-bottom: var(--space-10);
+}
+
+.heroLead {
+  font: var(--text-display-1);
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.heroAccent {
+  font-style: italic;
+  color: var(--accent-primary);
+}
+
+.heroCaption {
+  font: var(--text-body-lg);
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: var(--space-5);
+}
+
+.sectionHeading {
+  font: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* Colors read as set type — a name in its own ink, not a swatch (§9's
+   "type rendered against palette colors"). */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-6);
+  row-gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--border-hairline);
+  flex: none;
+}
+
+.legendName {
+  font: var(--text-h3);
+}
+
+/* Paper/neutral tones stay quiet — small chips, not colored words. */
+.paperRow {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+}
+
+.paperItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.paperSwatch {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-hairline);
+}
+
+.paperCaption {
+  font: var(--text-caption);
+  color: var(--text-muted);
+}
+
+/* A two-column magazine spread: a drop-cap intro paragraph beside a small
+   sidebar note card, using the same shadow/radius/border tokens as the
+   downloadable system — not decorative styling invented for this page. */
+.spread {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.introCol {
+  flex: 2 1 380px;
+}
+
+.introParagraph {
+  font: var(--text-body-lg);
+  color: var(--text-secondary);
+  max-width: 42ch;
+}
+
+.introParagraph::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  float: left;
+  line-height: 0.8;
+  padding-top: 6px;
+  padding-right: 8px;
+}
+
+.sidebarCol {
+  flex: 1 1 260px;
+}
+
+.sidebarCard {
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sidebarLabel {
+  font: var(--text-mono);
+  color: var(--text-muted);
+}
+
+.sidebarCaption {
+  font: var(--text-small);
+  color: var(--text-muted);
+}

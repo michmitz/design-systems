@@ -1,3 +1,7 @@
+/* Slate detail page's outer chrome — back link, header, download button.
+   Shared mechanics (DetailShell), styled as Slate. The specimen itself
+   lives in specimen.module.css. */
+
 .page {
   min-height: 100vh;
   padding: var(--s-space-8) var(--s-space-6) var(--s-space-10);
@@ -20,7 +24,7 @@
   align-items: flex-end;
   gap: var(--s-space-6);
   margin-top: var(--s-space-4);
-  margin-bottom: var(--s-space-8);
+  margin-bottom: var(--s-space-9);
   flex-wrap: wrap;
 }
 
@@ -48,78 +52,4 @@
 
 .downloadButton:hover {
   background: var(--s-accent-primary-hover);
-}
-
-.sectionHeading {
-  font: var(--s-text-h2);
-  color: var(--s-text-primary);
-  margin-bottom: var(--s-space-4);
-}
-
-.colorGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: var(--s-space-3);
-  margin-bottom: var(--s-space-8);
-}
-
-.swatch {
-  height: 64px;
-  border-radius: var(--s-radius-sm);
-  border: 1px solid var(--s-border-hairline);
-}
-
-.swatchCaption {
-  font: var(--s-text-caption);
-  color: var(--s-text-secondary);
-  margin-top: 6px;
-}
-
-.typeCard {
-  background: var(--s-bg-surface-raised);
-  border: 1px solid var(--s-border-hairline);
-  border-radius: var(--s-radius-lg);
-  padding: var(--s-space-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--s-space-3);
-  margin-bottom: var(--s-space-8);
-}
-
-.displaySample {
-  font: var(--s-text-display-2);
-  letter-spacing: var(--s-tracking-display);
-  color: var(--s-text-primary);
-}
-
-.fontDescription {
-  font: var(--s-text-h2);
-  color: var(--s-text-primary);
-}
-
-.bodySample {
-  font: var(--s-text-body);
-  color: var(--s-text-secondary);
-}
-
-.monoLabel {
-  font: var(--s-text-mono);
-  color: var(--s-text-muted);
-}
-
-.effectsRow {
-  display: flex;
-  gap: var(--s-space-6);
-  flex-wrap: wrap;
-  margin-bottom: var(--s-space-4);
-}
-
-.effectsBox {
-  width: 100px;
-  height: 100px;
-}
-
-.effectsCaption {
-  font: var(--s-text-small);
-  color: var(--s-text-muted);
 }
