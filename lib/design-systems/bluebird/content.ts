@@ -3,15 +3,25 @@
 // wordmark throughout (the name is never capitalized — see readme.md).
 export type BluebirdSwatch = { name: string; value: string; size: number; onDark?: boolean };
 
+// The 2x2 Components grid — button, input, card, badge, in bluebird's own
+// lowercase, spring-morning voice.
+export type BluebirdComponents = {
+  buttonLabel: string;
+  inputPlaceholder: string;
+  cardTitle: string;
+  cardBody: string;
+  badgeLabel: string;
+};
+
 export const bluebirdContent = {
   slug: "bluebird" as const,
   name: "bluebird",
-  tagline: "spring, joy, simplicity",
+  tagline: "spring, joy, simple",
   downloadLabel: "download tokens",
   downloadPreparingLabel: "preparing…",
   downloadErrorLabel: "download failed",
-  heroLine1: "good morning,",
-  heroPill: "little bird",
+  heroLine1: "Hello,",
+  heroPill: "world",
   heroCaption: "comfortaa carries the joy in headlines; mulish keeps everything else simple and easy to read.",
   // Arranged along a rising flight path rather than an overlapping cluster —
   // see specimen.module.css's .flightPath.
@@ -24,8 +34,12 @@ export const bluebirdContent = {
     { name: "Leaf 500", value: "var(--bb-leaf-500)", size: 64 },
     { name: "Ink 900", value: "var(--bb-ink-900)", size: 52, onDark: true },
   ] satisfies BluebirdSwatch[],
-  demoButtonLabel: "say hi",
-  demoBadgeLabel: "new",
-  demoInputText: "you@nest.com",
+  components: {
+    buttonLabel: "say hi",
+    inputPlaceholder: "you@nest.com",
+    cardTitle: "nest notes",
+    cardBody: "logged automatically",
+    badgeLabel: "new",
+  } satisfies BluebirdComponents,
   footnote: "spacing 4→96px · shadows sky-tinted and soft · easing bounces gently on hover.",
 };

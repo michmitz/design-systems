@@ -30,13 +30,29 @@ export function BloomSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>In use</div>
-      <div className={styles.uiRow}>
-        <button type="button" className={styles.demoButton}>
-          {bloomContent.demoButtonLabel}
-        </button>
-        <span className={styles.demoBadge}>{bloomContent.demoBadgeLabel}</span>
-        <div className={styles.demoInput}>{bloomContent.demoInputText}</div>
+      <div className={styles.sectionHeading}>Components</div>
+      <div className={styles.componentsGrid}>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Button</span>
+          <button type="button" className={styles.demoButton}>
+            {bloomContent.components.buttonLabel}
+          </button>
+        </div>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Input</span>
+          <div className={styles.demoInput}>{bloomContent.components.inputPlaceholder}</div>
+        </div>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Card</span>
+          <div className={styles.demoCard}>
+            <div className={styles.demoCardTitle}>{bloomContent.components.cardTitle}</div>
+            <div className={styles.demoCardBody}>{bloomContent.components.cardBody}</div>
+          </div>
+        </div>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Badge</span>
+          <span className={styles.demoBadge}>{bloomContent.components.badgeLabel}</span>
+        </div>
       </div>
 
       <p className={styles.footnote}>{bloomContent.footnote}</p>

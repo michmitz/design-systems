@@ -143,3 +143,87 @@
   font: var(--text-small);
   color: var(--text-muted);
 }
+
+/* Components — a 2x2 grid of small UI examples using the actual tokens:
+   button, input, card, badge. */
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.componentTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  min-width: 0;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+}
+
+.componentTileLabel {
+  font: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.demoButton {
+  font: var(--text-body);
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease-standard);
+}
+
+.demoButton:hover {
+  background: var(--accent-primary-hover);
+}
+
+.demoInput {
+  box-sizing: border-box;
+  width: 100%;
+  font: var(--text-body);
+  color: var(--text-muted);
+  background: var(--bg-page);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+}
+
+.demoCard {
+  box-sizing: border-box;
+  width: 100%;
+  background: var(--accent-primary-tint);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+}
+
+.demoCardTitle {
+  font: var(--text-h3);
+  color: var(--text-primary);
+}
+
+.demoCardBody {
+  font: var(--text-small);
+  color: var(--text-secondary);
+  margin-top: var(--space-1);
+}
+
+.demoBadge {
+  font: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  background: var(--accent-secondary-tint);
+  color: var(--accent-secondary);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+}

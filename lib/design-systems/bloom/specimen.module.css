@@ -95,13 +95,33 @@
   opacity: 1;
 }
 
-/* Small UI examples using the actual tokens — button, badge, input. */
-.uiRow {
-  display: flex;
-  align-items: center;
+/* Components — a 2x2 grid of small UI examples using the actual tokens:
+   button, input, card, badge. */
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--b-space-5);
-  flex-wrap: wrap;
   margin-bottom: var(--b-space-9);
+}
+
+.componentTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--b-space-4);
+  min-width: 0;
+  background: var(--b-bg-surface);
+  border: 1px solid var(--b-border-hairline);
+  border-radius: var(--b-radius-lg);
+  box-shadow: var(--b-shadow-sm);
+  padding: var(--b-space-6);
+}
+
+.componentTileLabel {
+  font: var(--b-text-caption);
+  letter-spacing: var(--b-tracking-caption);
+  text-transform: uppercase;
+  color: var(--b-text-muted);
 }
 
 .demoButton {
@@ -134,6 +154,8 @@
 }
 
 .demoInput {
+  box-sizing: border-box;
+  width: 100%;
   font: var(--b-text-body);
   color: var(--b-text-muted);
   background: var(--b-bg-surface-raised);
@@ -141,6 +163,26 @@
   border-radius: var(--b-radius-lg);
   padding: 10px 20px;
   box-shadow: var(--b-shadow-sm);
+}
+
+.demoCard {
+  box-sizing: border-box;
+  width: 100%;
+  background: var(--b-bg-surface-raised);
+  border-radius: var(--b-radius-md);
+  box-shadow: var(--b-shadow-sm);
+  padding: var(--b-space-4) var(--b-space-5);
+}
+
+.demoCardTitle {
+  font: var(--b-text-h3);
+  color: var(--b-text-primary);
+}
+
+.demoCardBody {
+  font: var(--b-text-small);
+  color: var(--b-text-muted);
+  margin-top: var(--b-space-1);
 }
 
 .footnote {

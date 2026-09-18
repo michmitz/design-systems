@@ -3,6 +3,16 @@
 // `onDark: true` means the blob is dark enough to need a light label.
 export type BloomBlob = { name: string; value: string; size: number; onDark?: boolean };
 
+// The 2x2 Components grid — button, input, card, badge, in Bloom's own
+// rounded/pastel voice.
+export type BloomComponents = {
+  buttonLabel: string;
+  inputPlaceholder: string;
+  cardTitle: string;
+  cardBody: string;
+  badgeLabel: string;
+};
+
 export const bloomContent = {
   slug: "bloom" as const,
   name: "Bloom",
@@ -10,8 +20,8 @@ export const bloomContent = {
   downloadLabel: "Download tokens",
   downloadPreparingLabel: "Preparing…",
   downloadErrorLabel: "Download failed",
-  heroLine1: "Hello,",
-  heroPill: "gentle world",
+  heroLine1: "Hello",
+  heroPill: "world",
   heroCaption: "Nunito, one rounded sans — friendly and round from display size down to captions.",
   blobs: [
     { name: "Pink 500", value: "var(--b-pink-500)", size: 132 },
@@ -22,8 +32,12 @@ export const bloomContent = {
     { name: "Sky 500", value: "var(--b-sky-500)", size: 92 },
     { name: "Ink 900", value: "var(--b-ink-900)", size: 76, onDark: true },
   ] satisfies BloomBlob[],
-  demoButtonLabel: "Say hello",
-  demoBadgeLabel: "New",
-  demoInputText: "you@site.com",
+  components: {
+    buttonLabel: "Say hello",
+    inputPlaceholder: "you@site.com",
+    cardTitle: "Bloom",
+    cardBody: "A little note, just because.",
+    badgeLabel: "New",
+  } satisfies BloomComponents,
   footnote: "Spacing 4→128px · shadows soft and pastel-tinted · easing gently overshoots on hover.",
 };

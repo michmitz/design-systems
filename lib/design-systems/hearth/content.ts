@@ -3,6 +3,16 @@
 // than the generic Colors/Type/Effects template. See Specimen.tsx.
 export type HearthLegendItem = { name: string; value: string };
 
+// The 2x2 Components grid — button, input, card, badge, in Hearth's warm
+// editorial voice.
+export type HearthComponents = {
+  buttonLabel: string;
+  inputPlaceholder: string;
+  cardTitle: string;
+  cardBody: string;
+  badgeLabel: string;
+};
+
 export const hearthContent = {
   slug: "hearth" as const,
   name: "Hearth",
@@ -11,8 +21,8 @@ export const hearthContent = {
   downloadLabel: "Download tokens",
   downloadPreparingLabel: "Preparing…",
   downloadErrorLabel: "Download failed",
-  heroLead: "Good morning,",
-  heroAccent: "warmly.",
+  heroLead: "Hello",
+  heroAccent: "world.",
   heroCaption: "A quiet note on color, type, and light.",
   // Accent colors carry enough contrast to read as their own colored word.
   accentLegend: [
@@ -35,4 +45,11 @@ export const hearthContent = {
   sidebarLabel: "--font-mono: IBM Plex Mono",
   sidebarCaption:
     "Spacing scale runs 4 → 128px; shadows are warm-tinted (ink, not black); easing is calm — no bounce.",
+  components: {
+    buttonLabel: "Subscribe",
+    inputPlaceholder: "you@hearth.co",
+    cardTitle: "Field Notes",
+    cardBody: "Autumn issue, out now.",
+    badgeLabel: "Essay",
+  } satisfies HearthComponents,
 };

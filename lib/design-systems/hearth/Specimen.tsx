@@ -47,6 +47,31 @@ export function HearthSpecimen() {
           </div>
         </div>
       </div>
+
+      <div className={styles.sectionHeading}>Components</div>
+      <div className={styles.componentsGrid}>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Button</span>
+          <button type="button" className={styles.demoButton}>
+            {hearthContent.components.buttonLabel}
+          </button>
+        </div>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Input</span>
+          <div className={styles.demoInput}>{hearthContent.components.inputPlaceholder}</div>
+        </div>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Card</span>
+          <div className={styles.demoCard}>
+            <div className={styles.demoCardTitle}>{hearthContent.components.cardTitle}</div>
+            <div className={styles.demoCardBody}>{hearthContent.components.cardBody}</div>
+          </div>
+        </div>
+        <div className={styles.componentTile}>
+          <span className={styles.componentTileLabel}>Badge</span>
+          <span className={styles.demoBadge}>{hearthContent.components.badgeLabel}</span>
+        </div>
+      </div>
     </>
   );
 }
