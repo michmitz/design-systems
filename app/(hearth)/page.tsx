@@ -8,8 +8,8 @@ export default function GalleryPage() {
       <div className={styles.container}>
         <h1 className={styles.title}>Design systems</h1>
         <p className={styles.intro}>
-          A small library of visual languages I&apos;ve built — click through to
-          explore each one&apos;s colors, type, and foundations, or download the
+          A small library of curated design themes. Click through to
+          explore each one&apos;s colors, type, and examples, or download the
           source tokens.
         </p>
         <div className={styles.grid}>
