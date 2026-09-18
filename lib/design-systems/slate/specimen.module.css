@@ -11,6 +11,13 @@
   margin-bottom: var(--s-space-3);
 }
 
+.sectionNumber {
+  font: var(--s-text-mono);
+  font-size: 0.68rem;
+  color: var(--s-text-muted);
+  margin-right: var(--s-space-2);
+}
+
 /* Type scale as a spec table: token name, its raw shorthand, and a live
    sample actually set in that font — the row IS the token in use. */
 .scaleTable {
@@ -81,7 +88,7 @@
   gap: var(--s-space-6);
   padding-top: var(--s-space-8);
   border-top: 1px solid var(--s-border-hairline);
-  margin-bottom: var(--s-space-4);
+  margin-bottom: var(--s-space-9);
 }
 
 .rulerItem {
@@ -101,6 +108,96 @@
   font-size: 0.68rem;
   color: var(--s-text-muted);
   white-space: nowrap;
+}
+
+/* Components — a 2x2 grid of small UI examples using the actual tokens:
+   button, input, card, badge. Cells share 1px hairlines, same spec-sheet
+   treatment as .paletteGrid, rather than shadowed cards. */
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--s-border-hairline);
+  border: 1px solid var(--s-border-hairline);
+  margin-bottom: var(--s-space-9);
+}
+
+.componentTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-space-3);
+  min-width: 0;
+  background: var(--s-bg-page);
+  padding: var(--s-space-5);
+}
+
+.componentTileLabel {
+  font: var(--s-text-mono);
+  font-size: 0.68rem;
+  letter-spacing: var(--s-tracking-caption);
+  text-transform: uppercase;
+  color: var(--s-text-muted);
+}
+
+.demoButton {
+  font: var(--s-text-body);
+  font-weight: 600;
+  background: var(--s-accent-primary);
+  color: var(--s-text-on-accent);
+  border: none;
+  border-radius: var(--s-radius-sm);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background var(--s-duration-base) var(--s-ease-standard);
+}
+
+.demoButton:hover {
+  background: var(--s-accent-primary-hover);
+}
+
+.demoInput {
+  box-sizing: border-box;
+  width: 100%;
+  font: var(--s-text-mono);
+  font-size: 0.85rem;
+  color: var(--s-text-muted);
+  background: var(--s-white);
+  border: 1px solid var(--s-border-hairline);
+  border-radius: var(--s-radius-sm);
+  padding: 8px 12px;
+}
+
+.demoCard {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid var(--s-border-hairline);
+  border-radius: var(--s-radius-sm);
+  padding: var(--s-space-3) var(--s-space-4);
+}
+
+.demoCardTitle {
+  font: var(--s-text-mono);
+  font-size: 0.78rem;
+  color: var(--s-text-primary);
+}
+
+.demoCardBody {
+  font: var(--s-text-small);
+  color: var(--s-text-muted);
+  margin-top: var(--s-space-1);
+}
+
+.demoBadge {
+  align-self: flex-start;
+  font: var(--s-text-mono);
+  font-size: 0.68rem;
+  letter-spacing: var(--s-tracking-caption);
+  text-transform: uppercase;
+  color: var(--s-text-primary);
+  border: 1px solid var(--s-border-strong);
+  border-radius: var(--s-radius-full);
+  padding: 4px 12px;
 }
 
 .footnote {

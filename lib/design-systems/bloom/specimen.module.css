@@ -3,38 +3,68 @@
    layout. Every value below is a --b-* token; nothing here is a hardcoded
    visual value. */
 
-.hero {
-  margin-bottom: var(--b-space-9);
-}
-
-.heroLine {
-  font: var(--b-text-display-1);
-  color: var(--b-text-primary);
-  margin: var(--b-space-2) 0;
-}
-
-.heroPill {
-  display: inline-block;
-  background: var(--b-accent-primary);
-  color: var(--b-text-on-accent);
-  padding: 0 var(--b-space-5);
-  border-radius: var(--b-radius-full);
-  box-shadow: var(--b-shadow-glow);
-}
-
-.heroCaption {
-  font: var(--b-text-body);
-  color: var(--b-text-secondary);
-  margin-top: var(--b-space-5);
-  max-width: 34ch;
-}
-
 .sectionHeading {
   font: var(--b-text-caption);
   letter-spacing: var(--b-tracking-caption);
   text-transform: uppercase;
   color: var(--b-text-secondary);
   margin-bottom: var(--b-space-4);
+}
+
+.sectionNumber {
+  font: var(--b-text-mono);
+  font-size: 0.68rem;
+  color: var(--b-accent-primary);
+  margin-right: var(--b-space-2);
+}
+
+/* Typeface — a stack of soft, rounded cards (not a hairline table) each
+   naming a token and rendering a live sample in that actual font. */
+.typefaceList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--b-space-4);
+  margin-bottom: var(--b-space-9);
+}
+
+.typefaceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--b-space-4);
+  min-width: 0;
+  background: var(--b-bg-surface);
+  border: 1px solid var(--b-border-hairline);
+  border-radius: var(--b-radius-lg);
+  padding: var(--b-space-5) var(--b-space-6);
+}
+
+.typefaceMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: none;
+}
+
+.typefaceToken {
+  font: var(--b-text-mono);
+  font-size: 0.78rem;
+  color: var(--b-text-muted);
+}
+
+.typefaceSpec {
+  font: var(--b-text-small);
+  color: var(--b-text-secondary);
+}
+
+.typefaceSample {
+  flex: 1;
+  min-width: 0;
+  color: var(--b-text-primary);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Overlapping circles you explore by hovering — colors as shapes, not a
@@ -95,13 +125,63 @@
   opacity: 1;
 }
 
-/* Small UI examples using the actual tokens — button, badge, input. */
-.uiRow {
+/* Spacing — a ruler of soft rounded bars, bar height *is* the token value. */
+.ruler {
   display: flex;
-  align-items: center;
-  gap: var(--b-space-5);
-  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--b-space-6);
+  padding-top: var(--b-space-6);
   margin-bottom: var(--b-space-9);
+}
+
+.rulerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--b-space-2);
+}
+
+.rulerBar {
+  width: 10px;
+  border-radius: var(--b-radius-full);
+  background: var(--b-accent-primary);
+  box-shadow: var(--b-shadow-sm);
+}
+
+.rulerLabel {
+  font: var(--b-text-caption);
+  letter-spacing: var(--b-tracking-caption);
+  color: var(--b-text-muted);
+  white-space: nowrap;
+}
+
+/* Components — a 2x2 grid of small UI examples using the actual tokens:
+   button, input, card, badge. */
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--b-space-5);
+  margin-bottom: var(--b-space-9);
+}
+
+.componentTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--b-space-4);
+  min-width: 0;
+  background: var(--b-bg-surface);
+  border: 1px solid var(--b-border-hairline);
+  border-radius: var(--b-radius-lg);
+  box-shadow: var(--b-shadow-sm);
+  padding: var(--b-space-6);
+}
+
+.componentTileLabel {
+  font: var(--b-text-caption);
+  letter-spacing: var(--b-tracking-caption);
+  text-transform: uppercase;
+  color: var(--b-text-muted);
 }
 
 .demoButton {
@@ -134,6 +214,8 @@
 }
 
 .demoInput {
+  box-sizing: border-box;
+  width: 100%;
   font: var(--b-text-body);
   color: var(--b-text-muted);
   background: var(--b-bg-surface-raised);
@@ -141,6 +223,26 @@
   border-radius: var(--b-radius-lg);
   padding: 10px 20px;
   box-shadow: var(--b-shadow-sm);
+}
+
+.demoCard {
+  box-sizing: border-box;
+  width: 100%;
+  background: var(--b-bg-surface-raised);
+  border-radius: var(--b-radius-md);
+  box-shadow: var(--b-shadow-sm);
+  padding: var(--b-space-4) var(--b-space-5);
+}
+
+.demoCardTitle {
+  font: var(--b-text-h3);
+  color: var(--b-text-primary);
+}
+
+.demoCardBody {
+  font: var(--b-text-small);
+  color: var(--b-text-muted);
+  margin-top: var(--b-space-1);
 }
 
 .footnote {

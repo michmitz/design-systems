@@ -2,6 +2,18 @@
 // set type rather than swatches, and a two-column magazine spread — rather
 // than the generic Colors/Type/Effects template. See Specimen.tsx.
 export type HearthLegendItem = { name: string; value: string };
+export type HearthTypefaceRow = { token: string; spec: string; font: string; sample: string };
+export type HearthSpacingStep = { token: string; px: number };
+
+// The 2x2 Components grid — button, input, card, badge, in Hearth's warm
+// editorial voice.
+export type HearthComponents = {
+  buttonLabel: string;
+  inputPlaceholder: string;
+  cardTitle: string;
+  cardBody: string;
+  badgeLabel: string;
+};
 
 export const hearthContent = {
   slug: "hearth" as const,
@@ -11,9 +23,17 @@ export const hearthContent = {
   downloadLabel: "Download tokens",
   downloadPreparingLabel: "Preparing…",
   downloadErrorLabel: "Download failed",
-  heroLead: "Good morning,",
-  heroAccent: "warmly.",
-  heroCaption: "A quiet note on color, type, and light.",
+  typefaces: [
+    { token: "--text-display-1", spec: "400 4rem/1.05", font: "var(--text-display-1)", sample: "Warm, unhurried type" },
+    { token: "--text-h2", spec: "500 1.75rem/1.25", font: "var(--text-h2)", sample: "Set in Newsreader" },
+    {
+      token: "--text-body",
+      spec: "400 1rem/1.6",
+      font: "var(--text-body)",
+      sample: "Figtree keeps body copy legible and friendly, from captions to full articles.",
+    },
+    { token: "--text-mono", spec: "400 0.9rem/1.5", font: "var(--text-mono)", sample: "IBM Plex Mono" },
+  ] satisfies HearthTypefaceRow[],
   // Accent colors carry enough contrast to read as their own colored word.
   accentLegend: [
     { name: "Ink 900", value: "var(--color-ink-900)" },
@@ -30,9 +50,24 @@ export const hearthContent = {
     { name: "Cream 100", value: "var(--color-cream-100)" },
     { name: "Ink 500", value: "var(--color-ink-500)" },
   ] satisfies HearthLegendItem[],
+  spacing: [
+    { token: "--space-1", px: 4 },
+    { token: "--space-3", px: 12 },
+    { token: "--space-5", px: 24 },
+    { token: "--space-7", px: 48 },
+    { token: "--space-9", px: 96 },
+    { token: "--space-10", px: 128 },
+  ] satisfies HearthSpacingStep[],
   introParagraph:
     "Body copy sits at 16px/1.6 in Figtree — a humanist sans that keeps things legible and friendly across long-form reading, from captions up through full articles.",
   sidebarLabel: "--font-mono: IBM Plex Mono",
   sidebarCaption:
     "Spacing scale runs 4 → 128px; shadows are warm-tinted (ink, not black); easing is calm — no bounce.",
+  components: {
+    buttonLabel: "Subscribe",
+    inputPlaceholder: "you@hearth.co",
+    cardTitle: "Field Notes",
+    cardBody: "Autumn issue, out now.",
+    badgeLabel: "Essay",
+  } satisfies HearthComponents,
 };

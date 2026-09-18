@@ -5,6 +5,16 @@ export type SlateSwatch = { name: string; value: string };
 export type SlateScaleRow = { token: string; spec: string; font: string; sample: string };
 export type SlateSpacingStep = { token: string; px: number };
 
+// The 2x2 Components grid — button, input, card, badge, in Slate's
+// monochrome/precise voice.
+export type SlateComponents = {
+  buttonLabel: string;
+  inputPlaceholder: string;
+  cardTitle: string;
+  cardBody: string;
+  badgeLabel: string;
+};
+
 export const slateContent = {
   slug: "slate" as const,
   name: "Slate",
@@ -37,5 +47,12 @@ export const slateContent = {
     { token: "--s-space-9", px: 96 },
     { token: "--s-space-10", px: 128 },
   ] satisfies SlateSpacingStep[],
+  components: {
+    buttonLabel: "Continue",
+    inputPlaceholder: "search index",
+    cardTitle: "Spec 04",
+    cardBody: "Auto-generated from tokens.",
+    badgeLabel: "Stable",
+  } satisfies SlateComponents,
   footnote: "Hairline borders (not shadows) separate surfaces; easing is linear-ish and fast — no bounce.",
 };
