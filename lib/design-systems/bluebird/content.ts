@@ -2,6 +2,7 @@
 // color circles instead of Bloom's overlapping cluster, and a lowercase
 // wordmark throughout (the name is never capitalized — see readme.md).
 export type BluebirdSwatch = { name: string; value: string; size: number; onDark?: boolean };
+export type BluebirdTypefaceRow = { token: string; spec: string; font: string; sample: string };
 
 // The 2x2 Components grid — button, input, card, badge, in bluebird's own
 // lowercase, spring-morning voice.
@@ -20,9 +21,17 @@ export const bluebirdContent = {
   downloadLabel: "download tokens",
   downloadPreparingLabel: "preparing…",
   downloadErrorLabel: "download failed",
-  heroLine1: "Hello,",
-  heroPill: "world",
-  heroCaption: "comfortaa carries the joy in headlines; mulish keeps everything else simple and easy to read.",
+  typefaces: [
+    { token: "--bb-text-display-1", spec: "700 3.5rem/1.15", font: "var(--bb-text-display-1)", sample: "spring, joy" },
+    { token: "--bb-text-h2", spec: "700 1.5rem/1.3", font: "var(--bb-text-h2)", sample: "set in comfortaa" },
+    {
+      token: "--bb-text-body",
+      spec: "400 1rem/1.6",
+      font: "var(--bb-text-body)",
+      sample: "mulish keeps body copy simple and easy to read.",
+    },
+    { token: "--bb-text-mono", spec: "400 0.9rem/1.5", font: "var(--bb-text-mono)", sample: "jetbrains mono" },
+  ] satisfies BluebirdTypefaceRow[],
   // Arranged along a rising flight path rather than an overlapping cluster —
   // see specimen.module.css's .flightPath.
   swatches: [

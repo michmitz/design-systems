@@ -1,18 +1,26 @@
 import { bloomContent } from "./content";
 import styles from "./specimen.module.css";
 
-// Bloom's own specimen — overlapping color blobs and rounded controls,
-// instead of the generic Colors/Type/Effects template (DESIGN-DIRECTION.md
-// §4). Rendered inside DetailShell by app/(bloom)/bloom/page.tsx.
+// Bloom's own specimen — a typeface card list, overlapping color blobs, and
+// rounded controls, instead of the generic Colors/Type/Effects template
+// (DESIGN-DIRECTION.md §4). Rendered inside DetailShell by
+// app/(bloom)/bloom/page.tsx.
 export function BloomSpecimen() {
   return (
     <>
-      <div className={styles.hero}>
-        <h2 className={styles.heroLine}>{bloomContent.heroLine1}</h2>
-        <h2 className={styles.heroLine}>
-          <span className={styles.heroPill}>{bloomContent.heroPill}</span>
-        </h2>
-        <p className={styles.heroCaption}>{bloomContent.heroCaption}</p>
+      <div className={styles.sectionHeading}>Typeface</div>
+      <div className={styles.typefaceList}>
+        {bloomContent.typefaces.map((row) => (
+          <div key={row.token} className={styles.typefaceRow}>
+            <div className={styles.typefaceMeta}>
+              <div className={styles.typefaceToken}>{row.token}</div>
+              <div className={styles.typefaceSpec}>{row.spec}</div>
+            </div>
+            <div className={styles.typefaceSample} style={{ font: row.font }}>
+              {row.sample}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className={styles.sectionHeading}>Colors — hover to reveal</div>

@@ -2,6 +2,7 @@
 // set type rather than swatches, and a two-column magazine spread — rather
 // than the generic Colors/Type/Effects template. See Specimen.tsx.
 export type HearthLegendItem = { name: string; value: string };
+export type HearthTypefaceRow = { token: string; spec: string; font: string; sample: string };
 
 // The 2x2 Components grid — button, input, card, badge, in Hearth's warm
 // editorial voice.
@@ -21,9 +22,17 @@ export const hearthContent = {
   downloadLabel: "Download tokens",
   downloadPreparingLabel: "Preparing…",
   downloadErrorLabel: "Download failed",
-  heroLead: "Hello",
-  heroAccent: "world.",
-  heroCaption: "A quiet note on color, type, and light.",
+  typefaces: [
+    { token: "--text-display-1", spec: "400 4rem/1.05", font: "var(--text-display-1)", sample: "Warm, unhurried type" },
+    { token: "--text-h2", spec: "500 1.75rem/1.25", font: "var(--text-h2)", sample: "Set in Newsreader" },
+    {
+      token: "--text-body",
+      spec: "400 1rem/1.6",
+      font: "var(--text-body)",
+      sample: "Figtree keeps body copy legible and friendly, from captions to full articles.",
+    },
+    { token: "--text-mono", spec: "400 0.9rem/1.5", font: "var(--text-mono)", sample: "IBM Plex Mono" },
+  ] satisfies HearthTypefaceRow[],
   // Accent colors carry enough contrast to read as their own colored word.
   accentLegend: [
     { name: "Ink 900", value: "var(--color-ink-900)" },

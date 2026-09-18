@@ -2,6 +2,7 @@
 // rounded controls, rather than the generic Colors/Type/Effects template.
 // `onDark: true` means the blob is dark enough to need a light label.
 export type BloomBlob = { name: string; value: string; size: number; onDark?: boolean };
+export type BloomTypefaceRow = { token: string; spec: string; font: string; sample: string };
 
 // The 2x2 Components grid — button, input, card, badge, in Bloom's own
 // rounded/pastel voice.
@@ -20,9 +21,17 @@ export const bloomContent = {
   downloadLabel: "Download tokens",
   downloadPreparingLabel: "Preparing…",
   downloadErrorLabel: "Download failed",
-  heroLine1: "Hello",
-  heroPill: "world",
-  heroCaption: "Nunito, one rounded sans — friendly and round from display size down to captions.",
+  typefaces: [
+    { token: "--b-text-display-1", spec: "700 3.75rem/1.1", font: "var(--b-text-display-1)", sample: "Soft & round" },
+    { token: "--b-text-h2", spec: "700 1.75rem/1.25", font: "var(--b-text-h2)", sample: "One rounded sans" },
+    {
+      token: "--b-text-body",
+      spec: "500 1rem/1.6",
+      font: "var(--b-text-body)",
+      sample: "Nunito carries everything, from display size down to captions.",
+    },
+    { token: "--b-text-mono", spec: "400 0.9rem/1.5", font: "var(--b-text-mono)", sample: "IBM Plex Mono" },
+  ] satisfies BloomTypefaceRow[],
   blobs: [
     { name: "Pink 500", value: "var(--b-pink-500)", size: 132 },
     { name: "Lavender 500", value: "var(--b-lavender-500)", size: 100 },

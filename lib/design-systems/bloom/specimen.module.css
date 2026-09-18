@@ -3,38 +3,61 @@
    layout. Every value below is a --b-* token; nothing here is a hardcoded
    visual value. */
 
-.hero {
-  margin-bottom: var(--b-space-9);
-}
-
-.heroLine {
-  font: var(--b-text-display-1);
-  color: var(--b-text-primary);
-  margin: var(--b-space-2) 0;
-}
-
-.heroPill {
-  display: inline-block;
-  background: var(--b-accent-primary);
-  color: var(--b-text-on-accent);
-  padding: 0 var(--b-space-5);
-  border-radius: var(--b-radius-full);
-  box-shadow: var(--b-shadow-glow);
-}
-
-.heroCaption {
-  font: var(--b-text-body);
-  color: var(--b-text-secondary);
-  margin-top: var(--b-space-5);
-  max-width: 34ch;
-}
-
 .sectionHeading {
   font: var(--b-text-caption);
   letter-spacing: var(--b-tracking-caption);
   text-transform: uppercase;
   color: var(--b-text-secondary);
   margin-bottom: var(--b-space-4);
+}
+
+/* Typeface — a stack of soft, rounded cards (not a hairline table) each
+   naming a token and rendering a live sample in that actual font. */
+.typefaceList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--b-space-4);
+  margin-bottom: var(--b-space-9);
+}
+
+.typefaceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--b-space-4);
+  min-width: 0;
+  background: var(--b-bg-surface);
+  border: 1px solid var(--b-border-hairline);
+  border-radius: var(--b-radius-lg);
+  padding: var(--b-space-5) var(--b-space-6);
+}
+
+.typefaceMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: none;
+}
+
+.typefaceToken {
+  font: var(--b-text-mono);
+  font-size: 0.78rem;
+  color: var(--b-text-muted);
+}
+
+.typefaceSpec {
+  font: var(--b-text-small);
+  color: var(--b-text-secondary);
+}
+
+.typefaceSample {
+  flex: 1;
+  min-width: 0;
+  color: var(--b-text-primary);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Overlapping circles you explore by hovering — colors as shapes, not a

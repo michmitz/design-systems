@@ -4,12 +4,19 @@ import styles from "./specimen.module.css";
 export function BluebirdSpecimen() {
   return (
     <>
-      <div className={styles.hero}>
-        <h2 className={styles.heroLine}>{bluebirdContent.heroLine1}</h2>
-        <h2 className={styles.heroLine}>
-          <span className={styles.heroPill}>{bluebirdContent.heroPill}</span>
-        </h2>
-        <p className={styles.heroCaption}>{bluebirdContent.heroCaption}</p>
+      <div className={styles.sectionHeading}>typeface</div>
+      <div className={styles.typefaceList}>
+        {bluebirdContent.typefaces.map((row) => (
+          <div key={row.token} className={styles.typefaceRow}>
+            <div className={styles.typefaceMeta}>
+              <div className={styles.typefaceToken}>{row.token}</div>
+              <div className={styles.typefaceSpec}>{row.spec}</div>
+            </div>
+            <div className={styles.typefaceSample} style={{ font: row.font }}>
+              {row.sample}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className={styles.sectionHeading}>colors — hover to reveal</div>

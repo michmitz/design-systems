@@ -1,34 +1,57 @@
-.hero {
-  margin-bottom: var(--bb-space-9);
-}
-
-.heroLine {
-  font: var(--bb-text-display-1);
-  color: var(--bb-text-primary);
-  margin: var(--bb-space-2) 0;
-}
-
-.heroPill {
-  display: inline-block;
-  background: var(--bb-accent-primary);
-  color: var(--bb-text-on-accent);
-  padding: 0 var(--bb-space-5);
-  border-radius: var(--bb-radius-full);
-  box-shadow: var(--bb-shadow-glow);
-}
-
-.heroCaption {
-  font: var(--bb-text-body);
-  color: var(--bb-text-secondary);
-  margin-top: var(--bb-space-5);
-  max-width: 34ch;
-}
-
 .sectionHeading {
   font: var(--bb-text-caption);
   letter-spacing: var(--bb-tracking-caption);
   color: var(--bb-text-secondary);
   margin-bottom: var(--bb-space-4);
+}
+
+/* Typeface — a stack of rounded cards, each naming a token and rendering a
+   live sample in that actual font. */
+.typefaceList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bb-space-3);
+  margin-bottom: var(--bb-space-9);
+}
+
+.typefaceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--bb-space-4);
+  min-width: 0;
+  background: var(--bb-bg-surface);
+  border: 1px solid var(--bb-border-hairline);
+  border-radius: var(--bb-radius-md);
+  padding: var(--bb-space-4) var(--bb-space-5);
+}
+
+.typefaceMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: none;
+}
+
+.typefaceToken {
+  font: var(--bb-text-caption);
+  letter-spacing: var(--bb-tracking-caption);
+  color: var(--bb-text-muted);
+}
+
+.typefaceSpec {
+  font: var(--bb-text-small);
+  color: var(--bb-text-secondary);
+}
+
+.typefaceSample {
+  flex: 1;
+  min-width: 0;
+  color: var(--bb-text-primary);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Circles you explore by hovering, each lifted a little higher than the

@@ -1,18 +1,24 @@
 import { hearthContent } from "./content";
 import styles from "./specimen.module.css";
 
-// Hearth's own specimen — an editorial hero, colors as set type, and a
+// Hearth's own specimen — a typeface spec table, colors as set type, and a
 // two-column magazine spread, instead of the generic Colors/Type/Effects
 // template (DESIGN-DIRECTION.md §4). Rendered inside DetailShell by
 // app/(hearth)/hearth/page.tsx.
 export function HearthSpecimen() {
   return (
     <>
-      <div className={styles.hero}>
-        <h2 className={styles.heroLead}>
-          {hearthContent.heroLead} <span className={styles.heroAccent}>{hearthContent.heroAccent}</span>
-        </h2>
-        <p className={styles.heroCaption}>{hearthContent.heroCaption}</p>
+      <div className={styles.sectionHeading}>Typeface</div>
+      <div className={styles.typefaceTable}>
+        {hearthContent.typefaces.map((row) => (
+          <div key={row.token} className={styles.typefaceRow}>
+            <div className={styles.typefaceToken}>{row.token}</div>
+            <div className={styles.typefaceSpec}>{row.spec}</div>
+            <div className={styles.typefaceSample} style={{ font: row.font }}>
+              {row.sample}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className={styles.sectionHeading}>Colors</div>
