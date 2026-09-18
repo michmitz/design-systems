@@ -11,6 +11,13 @@
   margin-bottom: var(--s-space-3);
 }
 
+.sectionNumber {
+  font: var(--s-text-mono);
+  font-size: 0.68rem;
+  color: var(--s-text-muted);
+  margin-right: var(--s-space-2);
+}
+
 /* Type scale as a spec table: token name, its raw shorthand, and a live
    sample actually set in that font — the row IS the token in use. */
 .scaleTable {
@@ -81,7 +88,7 @@
   gap: var(--s-space-6);
   padding-top: var(--s-space-8);
   border-top: 1px solid var(--s-border-hairline);
-  margin-bottom: var(--s-space-4);
+  margin-bottom: var(--s-space-9);
 }
 
 .rulerItem {

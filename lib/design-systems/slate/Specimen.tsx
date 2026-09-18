@@ -7,7 +7,9 @@ import styles from "./specimen.module.css";
 export function SlateSpecimen() {
   return (
     <>
-      <div className={styles.sectionHeading}>Type scale</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>01</span>Type scale
+      </div>
       <div className={styles.scaleTable}>
         {slateContent.scale.map((row) => (
           <div key={row.token} className={styles.scaleRow}>
@@ -20,7 +22,9 @@ export function SlateSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>Palette</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>02</span>Palette
+      </div>
       <div className={styles.paletteGrid}>
         {slateContent.swatches.map((swatch) => (
           <div key={swatch.name} className={styles.paletteCell}>
@@ -30,7 +34,9 @@ export function SlateSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>Spacing</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>03</span>Spacing
+      </div>
       <div className={styles.ruler}>
         {slateContent.spacing.map((step) => (
           <div key={step.token} className={styles.rulerItem}>
@@ -40,7 +46,9 @@ export function SlateSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>Components</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>04</span>Components
+      </div>
       <div className={styles.componentsGrid}>
         <div className={styles.componentTile}>
           <span className={styles.componentTileLabel}>Button</span>

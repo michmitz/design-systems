@@ -3,6 +3,7 @@
 // `onDark: true` means the blob is dark enough to need a light label.
 export type BloomBlob = { name: string; value: string; size: number; onDark?: boolean };
 export type BloomTypefaceRow = { token: string; spec: string; font: string; sample: string };
+export type BloomSpacingStep = { token: string; px: number };
 
 // The 2x2 Components grid — button, input, card, badge, in Bloom's own
 // rounded/pastel voice.
@@ -41,6 +42,14 @@ export const bloomContent = {
     { name: "Sky 500", value: "var(--b-sky-500)", size: 92 },
     { name: "Ink 900", value: "var(--b-ink-900)", size: 76, onDark: true },
   ] satisfies BloomBlob[],
+  spacing: [
+    { token: "--b-space-1", px: 4 },
+    { token: "--b-space-3", px: 12 },
+    { token: "--b-space-5", px: 24 },
+    { token: "--b-space-7", px: 48 },
+    { token: "--b-space-9", px: 96 },
+    { token: "--b-space-10", px: 128 },
+  ] satisfies BloomSpacingStep[],
   components: {
     buttonLabel: "Say hello",
     inputPlaceholder: "you@site.com",

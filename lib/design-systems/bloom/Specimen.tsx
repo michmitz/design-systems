@@ -8,7 +8,9 @@ import styles from "./specimen.module.css";
 export function BloomSpecimen() {
   return (
     <>
-      <div className={styles.sectionHeading}>Typeface</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>01</span>Typeface
+      </div>
       <div className={styles.typefaceList}>
         {bloomContent.typefaces.map((row) => (
           <div key={row.token} className={styles.typefaceRow}>
@@ -23,7 +25,9 @@ export function BloomSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>Colors — hover to reveal</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>02</span>Colors — hover to reveal
+      </div>
       <div className={styles.blobCluster}>
         {bloomContent.blobs.map((blob) => (
           <div
@@ -38,7 +42,21 @@ export function BloomSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>Components</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>03</span>Spacing
+      </div>
+      <div className={styles.ruler}>
+        {bloomContent.spacing.map((step) => (
+          <div key={step.token} className={styles.rulerItem}>
+            <div className={styles.rulerBar} style={{ height: step.px }} />
+            <div className={styles.rulerLabel}>{step.px}px</div>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>04</span>Components
+      </div>
       <div className={styles.componentsGrid}>
         <div className={styles.componentTile}>
           <span className={styles.componentTileLabel}>Button</span>

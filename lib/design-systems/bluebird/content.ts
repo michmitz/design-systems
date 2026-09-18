@@ -3,6 +3,7 @@
 // wordmark throughout (the name is never capitalized — see readme.md).
 export type BluebirdSwatch = { name: string; value: string; size: number; onDark?: boolean };
 export type BluebirdTypefaceRow = { token: string; spec: string; font: string; sample: string };
+export type BluebirdSpacingStep = { token: string; px: number };
 
 // The 2x2 Components grid — button, input, card, badge, in bluebird's own
 // lowercase, spring-morning voice.
@@ -43,6 +44,13 @@ export const bluebirdContent = {
     { name: "Leaf 500", value: "var(--bb-leaf-500)", size: 64 },
     { name: "Ink 900", value: "var(--bb-ink-900)", size: 52, onDark: true },
   ] satisfies BluebirdSwatch[],
+  spacing: [
+    { token: "--bb-space-1", px: 4 },
+    { token: "--bb-space-3", px: 12 },
+    { token: "--bb-space-5", px: 24 },
+    { token: "--bb-space-7", px: 48 },
+    { token: "--bb-space-9", px: 96 },
+  ] satisfies BluebirdSpacingStep[],
   components: {
     buttonLabel: "say hi",
     inputPlaceholder: "you@nest.com",

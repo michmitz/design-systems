@@ -3,6 +3,7 @@
 // than the generic Colors/Type/Effects template. See Specimen.tsx.
 export type HearthLegendItem = { name: string; value: string };
 export type HearthTypefaceRow = { token: string; spec: string; font: string; sample: string };
+export type HearthSpacingStep = { token: string; px: number };
 
 // The 2x2 Components grid — button, input, card, badge, in Hearth's warm
 // editorial voice.
@@ -49,6 +50,14 @@ export const hearthContent = {
     { name: "Cream 100", value: "var(--color-cream-100)" },
     { name: "Ink 500", value: "var(--color-ink-500)" },
   ] satisfies HearthLegendItem[],
+  spacing: [
+    { token: "--space-1", px: 4 },
+    { token: "--space-3", px: 12 },
+    { token: "--space-5", px: 24 },
+    { token: "--space-7", px: 48 },
+    { token: "--space-9", px: 96 },
+    { token: "--space-10", px: 128 },
+  ] satisfies HearthSpacingStep[],
   introParagraph:
     "Body copy sits at 16px/1.6 in Figtree — a humanist sans that keeps things legible and friendly across long-form reading, from captions up through full articles.",
   sidebarLabel: "--font-mono: IBM Plex Mono",

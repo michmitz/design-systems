@@ -5,6 +5,13 @@
   margin-bottom: var(--bb-space-4);
 }
 
+.sectionNumber {
+  font: var(--bb-text-mono);
+  font-size: 0.68rem;
+  color: var(--bb-accent-primary-hover);
+  margin-right: var(--bb-space-2);
+}
+
 /* Typeface — a stack of rounded cards, each naming a token and rendering a
    live sample in that actual font. */
 .typefaceList {
@@ -102,6 +109,36 @@
 
 .swatch:hover .swatchLabel {
   opacity: 1;
+}
+
+/* Spacing — a ruler of rounded bars, bar height *is* the token value. */
+.ruler {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--bb-space-5);
+  padding-top: var(--bb-space-6);
+  margin-bottom: var(--bb-space-9);
+}
+
+.rulerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bb-space-2);
+}
+
+.rulerBar {
+  width: 10px;
+  border-radius: var(--bb-radius-full);
+  background: var(--bb-accent-primary);
+  box-shadow: var(--bb-shadow-sm);
+}
+
+.rulerLabel {
+  font: var(--bb-text-caption);
+  letter-spacing: var(--bb-tracking-caption);
+  color: var(--bb-text-muted);
+  white-space: nowrap;
 }
 
 /* Components — a 2x2 grid of small UI examples using the actual tokens:

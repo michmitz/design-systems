@@ -12,6 +12,13 @@
   margin-bottom: var(--space-4);
 }
 
+.sectionNumber {
+  font: var(--text-mono);
+  font-size: 0.68rem;
+  color: var(--accent-primary);
+  margin-right: var(--space-2);
+}
+
 /* Typeface — a spec table: token, its raw shorthand, and a live sample set
    in that actual font, the same pattern Slate uses for its type scale. */
 .typefaceTable {
@@ -99,6 +106,37 @@
 .paperCaption {
   font: var(--text-caption);
   color: var(--text-muted);
+}
+
+/* Spacing — a ruler: bar height *is* the token value, not a label
+   describing it. Same idea as Slate's ruler, in Hearth's own ink. */
+.ruler {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-hairline);
+  margin-bottom: var(--space-9);
+}
+
+.rulerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rulerBar {
+  width: 4px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-primary);
+}
+
+.rulerLabel {
+  font: var(--text-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* A two-column magazine spread: a drop-cap intro paragraph beside a small

@@ -4,7 +4,9 @@ import styles from "./specimen.module.css";
 export function BluebirdSpecimen() {
   return (
     <>
-      <div className={styles.sectionHeading}>typeface</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>01</span>typeface
+      </div>
       <div className={styles.typefaceList}>
         {bluebirdContent.typefaces.map((row) => (
           <div key={row.token} className={styles.typefaceRow}>
@@ -19,7 +21,9 @@ export function BluebirdSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>colors — hover to reveal</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>02</span>colors — hover to reveal
+      </div>
       <div className={styles.flightPath}>
         {bluebirdContent.swatches.map((swatch, i) => (
           <div
@@ -39,7 +43,21 @@ export function BluebirdSpecimen() {
         ))}
       </div>
 
-      <div className={styles.sectionHeading}>components</div>
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>03</span>spacing
+      </div>
+      <div className={styles.ruler}>
+        {bluebirdContent.spacing.map((step) => (
+          <div key={step.token} className={styles.rulerItem}>
+            <div className={styles.rulerBar} style={{ height: step.px }} />
+            <div className={styles.rulerLabel}>{step.px}px</div>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>04</span>components
+      </div>
       <div className={styles.componentsGrid}>
         <div className={styles.componentTile}>
           <span className={styles.componentTileLabel}>button</span>
