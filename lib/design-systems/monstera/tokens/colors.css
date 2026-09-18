@@ -1,0 +1,43 @@
+:root {
+  --mo-parchment-50: #FBF8F0;
+  --mo-parchment-100: #F3EDDD;
+  --mo-parchment-200: #E7DFC5;
+
+  --mo-ink-900: #23261E;
+  --mo-ink-700: #494D3E;
+  --mo-ink-500: #767A64;
+  --mo-ink-300: #AAAD97;
+
+  --mo-moss-700: #3A5240;
+  --mo-moss-500: #5C7A5C;
+  --mo-moss-300: #9DB393;
+
+  --mo-fern-600: #2E4632;
+
+  --mo-danger-600: #9C4A3C;
+  --mo-warning-600: #A9843F;
+
+  --mo-text-primary: var(--mo-ink-900);
+  --mo-text-secondary: var(--mo-ink-700);
+  --mo-text-muted: var(--mo-ink-500);
+  --mo-text-on-accent: var(--mo-parchment-50);
+
+  --mo-bg-page: var(--mo-parchment-50);
+  --mo-bg-surface: var(--mo-parchment-100);
+  --mo-bg-surface-raised: #FFFDF7;
+  --mo-bg-sunk: var(--mo-parchment-200);
+
+  --mo-accent-primary: var(--mo-moss-500);
+  --mo-accent-primary-hover: var(--mo-moss-700);
+  --mo-accent-secondary: var(--mo-ink-500);
+  --mo-accent-tertiary: var(--mo-fern-600);
+
+  --mo-status-success: var(--mo-moss-500);
+  --mo-status-warning: var(--mo-warning-600);
+  --mo-status-danger: var(--mo-danger-600);
+  --mo-status-info: var(--mo-ink-500);
+
+  --mo-border-hairline: rgba(35, 38, 30, 0.14);
+  --mo-border-strong: rgba(35, 38, 30, 0.26);
+  --mo-border-accent: var(--mo-moss-500);
+}
