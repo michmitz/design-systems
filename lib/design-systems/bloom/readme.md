@@ -1,6 +1,6 @@
 # Bloom — a soft pastel design system
 
-A from-scratch foundations system: pastel pink, lavender and mint on lavender-white paper, very round corners, and gentle overshoot motion. A fourth contrast point — softer and lighter than Hearth, Voltage, or Slate.
+A from-scratch foundations system: pastel pink, lavender and mint on lavender-white paper, very round corners, and gentle overshoot motion. A contrast point — softer and lighter than Hearth or Slate.
 
 ## Content fundamentals
 
@@ -30,5 +30,5 @@ A from-scratch foundations system: pastel pink, lavender and mint on lavender-wh
 ## Caveats
 
 - Foundations only — no components/UI kit built yet.
-- Tokens are `--b-` prefixed to avoid collisions with Hearth (unprefixed), Voltage (`--v-`) and Slate (`--s-`).
+- Tokens are `--b-` prefixed to avoid collisions with Hearth (unprefixed) and Slate (`--s-`).
 - Fonts load from Google Fonts CDN (Nunito, IBM Plex Mono).

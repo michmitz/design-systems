@@ -8,7 +8,7 @@ import { DownloadButton } from "./DownloadButton";
  * behavior, and the responsive container. What goes *inside* — the
  * specimen — is deliberately not this component's concern. Each system
  * still supplies these class names from its own CSS Module (e.g.
- * lib/design-systems/voltage/detail.module.css) so the chrome itself reads
+ * lib/design-systems/slate/detail.module.css) so the chrome itself reads
  * as that system (border weight, hover easing, etc.), not one shared look.
  *
  * This project has no CSS Modules codegen configured, so a module import's
@@ -25,7 +25,7 @@ export type DetailShellClasses = Record<string, string>;
 // passed as `children` rather than baked in here, so this component can't
 // dictate a system's visual result. See DesignSystemDetail.tsx for the
 // generic specimen (used by Hearth/Slate/Bloom) and
-// lib/design-systems/voltage/Specimen.tsx for a bespoke one.
+// lib/design-systems/slate/Specimen.tsx for a bespoke one.
 export function DetailShell({
   slug,
   name,

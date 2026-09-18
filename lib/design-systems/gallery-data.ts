@@ -11,15 +11,14 @@
 // Figtree for every card title). Each card that isn't Hearth carries its own
 // `fontVariableClassName`: the next/font variable class that has to be
 // applied to that card's own DOM subtree for `titleFont`'s var() reference
-// to resolve — see voltage/slate/bloom's fonts.ts.
-import { ARCHIVO_VAR, archivo } from "@/lib/design-systems/voltage/fonts";
+// to resolve — see slate/bloom/bluebird's fonts.ts.
 import { WORK_SANS_VAR, workSans } from "@/lib/design-systems/slate/fonts";
 import { NUNITO_VAR, nunito } from "@/lib/design-systems/bloom/fonts";
 import { COMFORTAA_VAR, comfortaa } from "@/lib/design-systems/bluebird/fonts";
 import { NEWSREADER_VAR } from "@/lib/design-systems/hearth/fonts";
 
 export type GalleryCard = {
-  slug: "hearth" | "voltage" | "slate" | "bloom" | "bluebird";
+  slug: "hearth" | "slate" | "bloom" | "bluebird";
   href: string;
   name: string;
   description: string;
@@ -53,25 +52,6 @@ export const galleryCards: GalleryCard[] = [
     // Hearth's fonts are already global (root layout), so no fontVariableClassName needed.
     titleFont: `600 1.375rem/1.3 var(${NEWSREADER_VAR}), 'Iowan Old Style', Georgia, serif`,
     descriptionColor: "var(--text-muted)",
-  },
-  {
-    slug: "voltage",
-    href: "/voltage",
-    name: "VOLTAGE",
-    description: "Dark · Neon · Expressive",
-    swatches: [
-      "var(--v-lime-500)",
-      "var(--v-pink-500)",
-      "var(--v-cyan-500)",
-      "var(--v-bg-page)",
-    ],
-    swatchStripBackground: "var(--v-bg-page)",
-    cardBackground: "var(--v-bg-surface)",
-    cardBorder: "1px solid var(--v-border-hairline)",
-    titleColor: "var(--v-text-primary)",
-    titleFont: `800 1.375rem/1.3 var(${ARCHIVO_VAR}), system-ui, sans-serif`,
-    fontVariableClassName: archivo.variable,
-    descriptionColor: "var(--v-text-muted)",
   },
   {
     slug: "slate",
