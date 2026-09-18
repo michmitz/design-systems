@@ -18,4 +18,15 @@ export const inspirationPins: InspirationPin[] = [
     image: "/monstera/pin-3.jpg",
     alt: "Plant Journal editorial spread pairing a serif wordmark with script and typewriter type",
   },
+  {
+    href: "https://www.pinterest.com/pin/1049338781907368324/",
+    image: "/monstera/pin-4.jpg",
+    alt: "Plant Journal editorial spread pairing a serif wordmark with script and typewriter type",
+  },
+  {
+    href: "https://www.pinterest.com/pin/100275529199209490/",
+    image: "/monstera/pin-5.jpg",
+    alt: "Plant Journal editorial spread pairing a serif wordmark with script and typewriter type",
+  },
 ];
+
