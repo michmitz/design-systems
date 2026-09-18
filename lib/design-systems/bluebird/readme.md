@@ -29,5 +29,5 @@ A from-scratch foundations system: sky blue, sunny yellow and a warm rust accent
 ## Caveats
 
 - Foundations only — no components/UI kit built yet.
-- Tokens are `--bb-` prefixed to avoid collisions with Hearth (unprefixed), Voltage (`--v-`), Slate (`--s-`) and Bloom (`--b-`).
+- Tokens are `--bb-` prefixed to avoid collisions with Hearth (unprefixed), Slate (`--s-`) and Bloom (`--b-`).
 - Fonts load from Google Fonts CDN (Comfortaa, Mulish, JetBrains Mono).
