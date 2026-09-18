@@ -1,0 +1,60 @@
+/* Monstera detail page's outer chrome — back link, header, download button.
+   Shared mechanics (DetailShell), styled as Monstera. The specimen itself
+   lives in specimen.module.css. */
+
+.page {
+  min-height: 100vh;
+  padding: var(--mo-space-8) var(--mo-space-6) var(--mo-space-10);
+}
+
+.container {
+  max-width: var(--mo-container-max);
+  margin: 0 auto;
+}
+
+.backLink {
+  font: var(--mo-text-small);
+  color: var(--mo-text-muted);
+  text-decoration: none;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--mo-space-6);
+  margin-top: var(--mo-space-4);
+  margin-bottom: var(--mo-space-9);
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--mo-border-hairline);
+  padding-bottom: var(--mo-space-6);
+}
+
+.name {
+  font: var(--mo-text-display-1);
+  color: var(--mo-text-primary);
+}
+
+.tagline {
+  font: var(--mo-text-display-italic);
+  color: var(--mo-text-secondary);
+}
+
+.downloadButton {
+  font: 700 0.75rem/1.4 var(--mo-font-mono);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--mo-text-primary);
+  border: 1px solid var(--mo-border-strong);
+  border-radius: var(--mo-radius-sm);
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background var(--mo-duration-base) var(--mo-ease-standard), color var(--mo-duration-base) var(--mo-ease-standard), border-color var(--mo-duration-base) var(--mo-ease-standard);
+}
+
+.downloadButton:hover {
+  background: var(--mo-accent-primary);
+  border-color: var(--mo-accent-primary);
+  color: var(--mo-text-on-accent);
+}

@@ -1,0 +1,15 @@
+:root {
+  --mo-space-1: 4px;
+  --mo-space-2: 8px;
+  --mo-space-3: 12px;
+  --mo-space-4: 16px;
+  --mo-space-5: 24px;
+  --mo-space-6: 32px;
+  --mo-space-7: 48px;
+  --mo-space-8: 64px;
+  --mo-space-9: 96px;
+  --mo-space-10: 128px;
+
+  --mo-container-max: 1100px;
+  --mo-gutter: var(--mo-space-5);
+}

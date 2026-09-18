@@ -1,0 +1,321 @@
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: var(--mo-space-2);
+  font: var(--mo-text-caption);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  color: var(--mo-text-secondary);
+  border-top: 1px solid var(--mo-border-hairline);
+  padding-top: var(--mo-space-4);
+  margin-bottom: var(--mo-space-4);
+}
+
+.sectionNumber {
+  color: var(--mo-accent-primary-hover);
+}
+
+/* Typeface — a stack of label rows: token + spec on the left, a live sample
+   set in that actual font on the right. */
+.typefaceStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mo-space-4);
+  margin-bottom: var(--mo-space-9);
+}
+
+.typefaceRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--mo-space-5);
+  border-bottom: 1px solid var(--mo-border-hairline);
+  padding-bottom: var(--mo-space-3);
+}
+
+.typefaceMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: none;
+}
+
+.typefaceToken {
+  font: var(--mo-text-caption);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  color: var(--mo-text-muted);
+}
+
+.typefaceSpec {
+  font: var(--mo-text-small);
+  color: var(--mo-text-secondary);
+}
+
+.typefaceSample {
+  flex: 1;
+  min-width: 0;
+  color: var(--mo-text-primary);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Below this width the meta column leaves too little room for a display-size
+   sample to truncate legibly — stack label above sample instead. */
+@media (max-width: 640px) {
+  .typefaceRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--mo-space-2);
+  }
+
+  .typefaceSample {
+    text-align: left;
+    white-space: normal;
+    max-width: 100%;
+  }
+}
+
+/* Color — rectangular specimen tabs, like small pinned fabric/paint swatches
+   rather than a plain grid (DESIGN-DIRECTION.md §9). */
+.paletteRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mo-space-4);
+  padding-top: var(--mo-space-2);
+  margin-bottom: var(--mo-space-9);
+}
+
+.paletteTab {
+  display: flex;
+  flex-direction: column;
+  width: 104px;
+}
+
+.paletteSwatch {
+  height: 72px;
+  border: 1px solid var(--mo-border-hairline);
+  border-radius: var(--mo-radius-sm);
+  box-shadow: var(--mo-shadow-sm);
+  transition: transform var(--mo-duration-base) var(--mo-ease-standard), box-shadow var(--mo-duration-base) var(--mo-ease-standard);
+}
+
+.paletteTab:hover .paletteSwatch {
+  transform: translateY(-4px);
+  box-shadow: var(--mo-shadow-md);
+}
+
+.paletteLabel {
+  font: var(--mo-text-caption);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  color: var(--mo-text-muted);
+  margin-top: var(--mo-space-2);
+}
+
+/* Spacing — a ruler along the page edge, bar height *is* the token value. */
+.ruler {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--mo-space-6);
+  padding: var(--mo-space-6) 0 var(--mo-space-2);
+  margin-bottom: var(--mo-space-9);
+  border-bottom: 1px solid var(--mo-border-hairline);
+}
+
+.rulerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mo-space-2);
+}
+
+.rulerBar {
+  width: 2px;
+  background: var(--mo-ink-500);
+}
+
+.rulerLabel {
+  font: var(--mo-text-caption);
+  letter-spacing: var(--mo-tracking-caption);
+  color: var(--mo-text-muted);
+  white-space: nowrap;
+}
+
+/* Components — a 2x2 grid of small UI examples using the actual tokens:
+   button, input, card, badge. */
+.componentsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--mo-space-5);
+  margin-bottom: var(--mo-space-9);
+}
+
+.componentTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--mo-space-4);
+  min-width: 0;
+  background: var(--mo-bg-surface-raised);
+  border: 1px solid var(--mo-border-hairline);
+  border-radius: var(--mo-radius-md);
+  padding: var(--mo-space-6);
+}
+
+.componentTileLabel {
+  font: var(--mo-text-caption);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  color: var(--mo-text-muted);
+}
+
+.demoButton {
+  font: 700 0.8rem/1.4 var(--mo-font-mono);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--mo-text-primary);
+  border: 1px solid var(--mo-border-strong);
+  border-radius: var(--mo-radius-sm);
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background var(--mo-duration-base) var(--mo-ease-standard), color var(--mo-duration-base) var(--mo-ease-standard), border-color var(--mo-duration-base) var(--mo-ease-standard);
+}
+
+.demoButton:hover {
+  background: var(--mo-accent-primary);
+  border-color: var(--mo-accent-primary);
+  color: var(--mo-text-on-accent);
+}
+
+.demoInput {
+  box-sizing: border-box;
+  width: 100%;
+  font: var(--mo-text-body);
+  color: var(--mo-text-muted);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--mo-border-strong);
+  padding: 8px 2px;
+}
+
+.demoCard {
+  box-sizing: border-box;
+  width: 100%;
+  background: var(--mo-bg-page);
+  border: 1px solid var(--mo-border-hairline);
+  border-radius: var(--mo-radius-sm);
+  padding: var(--mo-space-4) var(--mo-space-5);
+}
+
+.demoCardTitle {
+  font: var(--mo-text-h3);
+  color: var(--mo-text-primary);
+}
+
+.demoCardBody {
+  font: var(--mo-text-small);
+  color: var(--mo-text-muted);
+  margin-top: var(--mo-space-1);
+}
+
+.demoBadge {
+  font: 700 0.68rem/1.4 var(--mo-font-mono);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  color: var(--mo-moss-700);
+  border: 1px solid var(--mo-moss-500);
+  border-radius: var(--mo-radius-sm);
+  padding: 6px 10px;
+}
+
+.footnote {
+  font: var(--mo-text-small);
+  color: var(--mo-text-muted);
+}
+
+/* Inspiration — a small pinboard: photographs pinned at a slight rotation,
+   each linking out to its Pinterest source (see components/InspirationGrid.tsx).
+   Just an image and a link — no Pinterest API. */
+.inspirationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--mo-space-7);
+  padding-top: var(--mo-space-6);
+}
+
+.inspirationItem {
+  position: relative;
+  display: block;
+  background: var(--mo-bg-surface-raised);
+  padding: var(--mo-space-2);
+  border: 1px solid var(--mo-border-hairline);
+  border-radius: var(--mo-radius-sm);
+  box-shadow: var(--mo-shadow-sm);
+  transform: rotate(-2deg);
+  transition: transform var(--mo-duration-base) var(--mo-ease-standard), box-shadow var(--mo-duration-base) var(--mo-ease-standard);
+}
+
+.inspirationItem:nth-child(2n) {
+  transform: rotate(1.5deg);
+}
+
+.inspirationItem:nth-child(3n) {
+  transform: rotate(-1deg);
+}
+
+.inspirationItem:hover,
+.inspirationItem:focus-visible {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: var(--mo-shadow-lg);
+  z-index: 1;
+}
+
+.inspirationPinDot {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: var(--mo-radius-full);
+  background: var(--mo-accent-primary);
+  box-shadow: var(--mo-shadow-sm);
+  z-index: 2;
+}
+
+.inspirationImageWrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.inspirationImage {
+  object-fit: cover;
+}
+
+.inspirationOverlay {
+  position: absolute;
+  left: var(--mo-space-2);
+  right: var(--mo-space-2);
+  bottom: var(--mo-space-2);
+  font: 700 0.62rem/1.4 var(--mo-font-mono);
+  letter-spacing: var(--mo-tracking-caption);
+  text-transform: uppercase;
+  color: var(--mo-parchment-50);
+  background: rgba(35, 38, 30, 0.55);
+  padding: 6px 8px;
+  border-radius: var(--mo-radius-sm);
+  opacity: 0;
+  transition: opacity var(--mo-duration-base) var(--mo-ease-standard);
+}
+
+.inspirationItem:hover .inspirationOverlay,
+.inspirationItem:focus-visible .inspirationOverlay {
+  opacity: 1;
+}

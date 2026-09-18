@@ -16,9 +16,10 @@ import { WORK_SANS_VAR, workSans } from "@/lib/design-systems/slate/fonts";
 import { NUNITO_VAR, nunito } from "@/lib/design-systems/bloom/fonts";
 import { COMFORTAA_VAR, comfortaa } from "@/lib/design-systems/bluebird/fonts";
 import { NEWSREADER_VAR } from "@/lib/design-systems/hearth/fonts";
+import { PLAYFAIR_DISPLAY_VAR, playfairDisplay } from "@/lib/design-systems/monstera/fonts";
 
 export type GalleryCard = {
-  slug: "hearth" | "slate" | "bloom" | "bluebird";
+  slug: "hearth" | "slate" | "bloom" | "bluebird" | "monstera";
   href: string;
   name: string;
   description: string;
@@ -109,5 +110,24 @@ export const galleryCards: GalleryCard[] = [
     titleFont: `700 1.375rem/1.3 var(${COMFORTAA_VAR}), system-ui, sans-serif`,
     fontVariableClassName: comfortaa.variable,
     descriptionColor: "var(--bb-text-muted)",
+  },
+  {
+    slug: "monstera",
+    href: "/monstera",
+    name: "Monstera",
+    description: "Parchment · Botanical",
+    swatches: [
+      "var(--mo-moss-700)",
+      "var(--mo-moss-300)",
+      "var(--mo-ink-500)",
+      "var(--mo-parchment-100)",
+    ],
+    swatchStripBackground: "var(--mo-bg-page)",
+    cardBackground: "var(--mo-bg-surface-raised)",
+    cardBorder: "1px solid var(--mo-border-hairline)",
+    titleColor: "var(--mo-text-primary)",
+    titleFont: `600 1.375rem/1.3 var(${PLAYFAIR_DISPLAY_VAR}), Georgia, serif`,
+    fontVariableClassName: playfairDisplay.variable,
+    descriptionColor: "var(--mo-text-muted)",
   },
 ];
