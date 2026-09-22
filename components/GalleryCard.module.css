@@ -1,0 +1,150 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-decoration: none;
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow-rest);
+  transition:
+    transform var(--card-duration) var(--card-ease),
+    box-shadow var(--card-duration) var(--card-ease);
+  opacity: 0;
+  animation: riseIn 560ms cubic-bezier(0.2, 0, 0.15, 1) var(--card-delay) both;
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--pill-color);
+  outline-offset: 2px;
+}
+
+.textZone {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1 1 340px;
+  min-width: 0;
+  padding: 24px var(--text-pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.textStack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.name {
+  font: var(--name-font);
+  color: var(--name-color);
+  letter-spacing: var(--name-ls);
+  line-height: var(--name-lh);
+}
+
+.tagline {
+  font: var(--tagline-font);
+  color: var(--tagline-color);
+}
+
+.monoLine {
+  font: var(--mono-font);
+  color: var(--mono-color);
+  letter-spacing: var(--mono-ls);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding-left: var(--text-pad-x);
+  background: var(--veil);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 280ms var(--card-ease);
+  pointer-events: none;
+}
+
+.card:hover .overlay,
+.card:focus-visible .overlay {
+  opacity: 1;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  font: var(--pill-font);
+  letter-spacing: var(--pill-ls);
+  text-transform: uppercase;
+  color: var(--pill-color);
+  border: 1px solid var(--pill-border);
+  border-radius: var(--pill-radius);
+  transform: translateY(8px);
+  transition: transform 320ms var(--card-ease);
+}
+
+.card:hover .pill,
+.card:focus-visible .pill {
+  transform: translateY(0);
+}
+
+.pillArrow {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.colorField {
+  flex: 1 1 220px;
+  min-width: 0;
+  display: flex;
+  min-height: 132px;
+}
+
+.band {
+  min-width: 0;
+  transform-origin: right;
+  animation: wipeIn 620ms cubic-bezier(0.2, 0, 0.15, 1) both;
+}
+
+.band:first-child {
+  flex: 1 1 auto;
+}
+
+.band:not(:first-child) {
+  flex: 0 0 20px;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wipeIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
