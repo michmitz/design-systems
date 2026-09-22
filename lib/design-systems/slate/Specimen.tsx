@@ -1,4 +1,6 @@
+import { InspirationGrid } from "@/components/InspirationGrid";
 import { slateContent } from "./content";
+import { inspirationPins } from "./inspiration-links";
 import styles from "./specimen.module.css";
 
 // Slate's own specimen — a spec table, a dense grid, and a ruler, instead
@@ -74,6 +76,21 @@ export function SlateSpecimen() {
       </div>
 
       <p className={styles.footnote}>{slateContent.footnote}</p>
+
+      <div className={styles.sectionHeading}>
+        <span className={styles.sectionNumber}>05</span>Inspiration
+      </div>
+      <InspirationGrid
+        pins={inspirationPins}
+        classes={{
+          grid: styles.inspirationGrid,
+          item: styles.inspirationItem,
+          imageWrap: styles.inspirationImageWrap,
+          image: styles.inspirationImage,
+          pinDot: styles.inspirationPinDot,
+          overlay: styles.inspirationOverlay,
+        }}
+      />
     </>
   );
 }
