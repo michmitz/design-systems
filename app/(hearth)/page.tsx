@@ -8,7 +8,7 @@ export default function GalleryPage() {
       <div className={styles.container}>
         <div className={styles.header}>
           <h1 className={styles.title}>Design systems</h1>
-          <p className={styles.meta}>Five systems · 2025—2026</p>
+          <p className={styles.meta}>2026</p>
         </div>
         <p className={styles.lede}>
            A small library of curated design themes. Click through to

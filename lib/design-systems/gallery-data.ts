@@ -148,7 +148,7 @@ export const galleryCards: GalleryCard[] = [
     slug: "bluebird",
     href: "/bluebird",
     name: "bluebird",
-    tagline: "sky-bright, sun-warmed, endlessly cheerful",
+    tagline: "bright, sunny, cheerful",
     fontStackLabel: "Comfortaa · Mulish · JetBrains Mono",
     fontVariableClassName: `${comfortaa.variable} ${mulish.variable} ${jetbrainsMono.variable}`,
 
