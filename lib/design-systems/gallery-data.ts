@@ -15,19 +15,18 @@
 //
 // Bluebird has no entry in the row-card spec (it predates that system
 // getting a page). Its values below follow the same resolution method used
-// for the five specced systems: colors/fonts/radius from its own tokens,
+// for the other specced systems: colors/fonts/radius from its own tokens,
 // with the same per-system judgment calls the spec makes elsewhere (e.g.
-// Bloom and Almanac use a darker pill color than the band accent for
+// Almanac uses a darker pill color than the band accent for
 // contrast against the veil — Bluebird's sky-500 accent has the same
 // problem, so its pill uses sky-600 too).
 import { WORK_SANS_VAR, IBM_PLEX_MONO_VAR as SLATE_MONO_VAR, workSans, ibmPlexMono as slateMono } from "@/lib/design-systems/slate/fonts";
-import { NUNITO_VAR, IBM_PLEX_MONO_VAR as BLOOM_MONO_VAR, nunito, ibmPlexMono as bloomMono } from "@/lib/design-systems/bloom/fonts";
 import { COMFORTAA_VAR, MULISH_VAR, JETBRAINS_MONO_VAR, comfortaa, mulish, jetbrainsMono } from "@/lib/design-systems/bluebird/fonts";
 import { NEWSREADER_VAR, FIGTREE_VAR, IBM_PLEX_MONO_VAR as HEARTH_MONO_VAR } from "@/lib/design-systems/hearth/fonts";
 import { PLAYFAIR_DISPLAY_VAR, SPACE_MONO_VAR, playfairDisplay, spaceMono } from "@/lib/design-systems/monstera/fonts";
 
 export type GalleryCard = {
-  slug: "hearth" | "slate" | "bloom" | "bluebird" | "monstera";
+  slug: "hearth" | "slate" | "bluebird" | "monstera";
   href: string;
   name: string;
   tagline: string;
@@ -144,43 +143,6 @@ export const galleryCards: GalleryCard[] = [
     pillRadius: "var(--s-radius-md)",
     pillFont: `600 0.75rem/1 var(${WORK_SANS_VAR}), system-ui, sans-serif`,
     pillLetterSpacing: "0.12em",
-  },
-  {
-    slug: "bloom",
-    href: "/bloom",
-    name: "Bloom",
-    tagline: "soft, friendly, a little bit sugary",
-    fontStackLabel: "Nunito · IBM Plex Mono",
-    fontVariableClassName: `${nunito.variable} ${bloomMono.variable}`,
-
-    cardBackground: "var(--b-bg-page)",
-    cardBorder: "1px solid var(--b-border-hairline)",
-    radius: "var(--b-radius-lg)",
-    shadowRest: "var(--b-shadow-sm)",
-    shadowHover: "0 20px 44px rgba(180, 130, 200, 0.22)",
-    easing: "var(--b-ease-soft)",
-    duration: "280ms",
-    textPaddingX: "32px",
-
-    nameFont: `800 2rem/1.15 var(${NUNITO_VAR}), system-ui, sans-serif`,
-    nameColor: "var(--b-text-primary)",
-    nameLineHeight: "1.15",
-
-    taglineFont: `500 1.0625rem/1.4 var(${NUNITO_VAR}), system-ui, sans-serif`,
-    taglineColor: "var(--b-text-secondary)",
-
-    monoFont: `400 0.6875rem/1.6 var(${BLOOM_MONO_VAR}), ui-monospace, monospace`,
-    monoColor: "var(--b-text-muted)",
-    monoLetterSpacing: "var(--b-tracking-caption)",
-
-    bands: ["var(--b-pink-600)", "var(--b-lavender-500)", "var(--b-mint-500)", "var(--b-butter-500)"],
-
-    veil: "rgba(255, 251, 254, 0.93)",
-    pillColor: "#C2497C",
-    pillBorder: "rgba(236, 111, 160, 0.32)",
-    pillRadius: "var(--b-radius-full)",
-    pillFont: `700 0.75rem/1 var(${NUNITO_VAR}), system-ui, sans-serif`,
-    pillLetterSpacing: "0.1em",
   },
   {
     slug: "bluebird",

@@ -24,7 +24,7 @@ export type DetailShellClasses = Record<string, string>;
 // itself — colors, type, effects, whatever composition a system wants — is
 // passed as `children` rather than baked in here, so this component can't
 // dictate a system's visual result. See DesignSystemDetail.tsx for the
-// generic specimen (used by Hearth/Slate/Bloom) and
+// generic specimen (used by Hearth/Slate) and
 // lib/design-systems/slate/Specimen.tsx for a bespoke one.
 export function DetailShell({
   slug,

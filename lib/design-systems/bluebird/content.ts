@@ -1,6 +1,6 @@
 // bluebird's own specimen content — spring/joy: a rising flight path of
-// color circles instead of Bloom's overlapping cluster, and a lowercase
-// wordmark throughout (the name is never capitalized — see readme.md).
+// color circles, and a lowercase wordmark throughout (the name is never
+// capitalized — see readme.md).
 export type BluebirdSwatch = { name: string; value: string; size: number; onDark?: boolean };
 export type BluebirdTypefaceRow = { token: string; spec: string; font: string; sample: string };
 export type BluebirdSpacingStep = { token: string; px: number };
