@@ -73,7 +73,7 @@ export const galleryCards: GalleryCard[] = [
     slug: "hearth",
     href: "/hearth",
     name: "Hearth",
-    tagline: "warm, human, made of paper and clay",
+    tagline: "warm, paper-toned, hand-finished",
     fontStackLabel: "Newsreader · Figtree · IBM Plex Mono",
     // Hearth's fonts are already global (root layout), so no fontVariableClassName needed.
 
@@ -185,7 +185,7 @@ export const galleryCards: GalleryCard[] = [
     slug: "monstera",
     href: "/monstera",
     name: "Monstera",
-    tagline: "pressed, cataloged, quietly botanical",
+    tagline: "pressed, cataloged, botanical",
     fontStackLabel: "Playfair Display · Karla · Space Mono",
     fontVariableClassName: `${playfairDisplay.variable} ${spaceMono.variable}`,
 

@@ -29,9 +29,9 @@ export const bluebirdContent = {
       token: "--bb-text-body",
       spec: "400 1rem/1.6",
       font: "var(--bb-text-body)",
-      sample: "mulish keeps body copy simple and easy to read.",
+      sample: "mulish is used for body copy and interface text.",
     },
-    { token: "--bb-text-mono", spec: "400 0.9rem/1.5", font: "var(--bb-text-mono)", sample: "jetbrains mono" },
+    { token: "--bb-text-mono", spec: "400 0.9rem/1.5", font: "var(--bb-text-mono)", sample: "set in jetbrains mono" },
   ] satisfies BluebirdTypefaceRow[],
   // Arranged along a rising flight path rather than an overlapping cluster —
   // see specimen.module.css's .flightPath.

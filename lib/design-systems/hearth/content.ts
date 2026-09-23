@@ -18,13 +18,13 @@ export type HearthComponents = {
 export const hearthContent = {
   slug: "hearth" as const,
   name: "Hearth",
-  tagline: "warm, unhurried, hand-finished",
+  tagline: "warm, paper-toned, hand-finished",
   taglineItalic: true,
   downloadLabel: "Download tokens",
   downloadPreparingLabel: "Preparing…",
   downloadErrorLabel: "Download failed",
   typefaces: [
-    { token: "--text-display-1", spec: "400 4rem/1.05", font: "var(--text-display-1)", sample: "Warm, unhurried type" },
+    { token: "--text-display-1", spec: "400 4rem/1.05", font: "var(--text-display-1)", sample: "Warm, hand-finished" },
     { token: "--text-h2", spec: "500 1.75rem/1.25", font: "var(--text-h2)", sample: "Set in Newsreader" },
     {
       token: "--text-body",
@@ -32,7 +32,7 @@ export const hearthContent = {
       font: "var(--text-body)",
       sample: "Figtree keeps body copy legible and friendly, from captions to full articles.",
     },
-    { token: "--text-mono", spec: "400 0.9rem/1.5", font: "var(--text-mono)", sample: "IBM Plex Mono" },
+    { token: "--text-mono", spec: "400 0.9rem/1.5", font: "var(--text-mono)", sample: "Set in IBM Plex Mono" },
   ] satisfies HearthTypefaceRow[],
   // Accent colors carry enough contrast to read as their own colored word.
   accentLegend: [

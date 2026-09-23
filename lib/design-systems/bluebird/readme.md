@@ -4,10 +4,11 @@ A from-scratch foundations system: sky blue, sunny yellow and a warm rust accent
 
 ## Content fundamentals
 
-- **Voice:** warm, kind, plain-spoken. Short sentences, simple words — the joy comes through in color and shape, not exclamation points.
+- **Voice:** warm, plain-spoken, direct. Short sentences, simple words — the joy comes through in color and shape, not exclamation points or flowery description.
 - **Casing:** lowercase throughout — headings, labels, buttons, the name itself. No ALL CAPS, ever.
-- **Vibe words:** spring, joy, luck, peace, kindness, simplicity.
+- **Vibe words:** spring, joy, simple.
 - **Emoji:** not used — joy comes from color, roundness and motion, not glyphs.
+- **Font names:** when a sample is just a font name (e.g. mono specimens), frame it plainly — "set in [font]" — rather than leaving a bare, unexplained name on the page.
 
 ## Visual foundations
 
