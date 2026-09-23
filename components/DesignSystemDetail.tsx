@@ -8,7 +8,7 @@ export type ColorSwatch = { name: string; value: string };
 
 export type DesignSystemDetailConfig = {
   /** Matches app/api/download/[system]/route.ts's allowed slugs. */
-  slug: "hearth" | "slate" | "bloom" | "bluebird";
+  slug: "hearth" | "slate" | "bluebird";
   name: string;
   tagline: string;
   taglineItalic?: boolean;
@@ -44,8 +44,8 @@ export type DesignSystemDetailClasses = Record<string, string>;
 
 // One specimen composition — "here are the colors, here's the type, here
 // are spacing/effects" — built on DetailShell like any other composition
-// would be, so it has no special claim on how a detail page looks. Hearth,
-// Slate, and Bloom each ended up with their own bespoke
+// would be, so it has no special claim on how a detail page looks. Hearth
+// and Slate each ended up with their own bespoke
 // composition instead (see each system's Specimen.tsx) once the point was
 // proven that they didn't have to share this one. Kept here as a ready-made
 // option for a future set whose visual idea actually suits a plain grid —

@@ -4,11 +4,11 @@ A from-scratch foundations system built for a personal portfolio / fun project. 
 
 ## Content fundamentals
 
-- **Voice:** warm and direct, like a note from a friend who's good at their craft. Second person ("you"), contractions welcome, no corporate hedging.
+- **Voice:** warm and direct, plainspoken. Second person ("you"), contractions welcome, no corporate hedging, no poetic scene-setting.
 - **Casing:** sentence case everywhere — headings, buttons, labels. No ALL CAPS except tiny eyebrow/caption labels, and even those stay light (letter-spaced, not shouty).
-- **Vibe words:** unhurried, hand-finished, sun-warmed, a little imperfect on purpose.
-- **Emoji:** not used. Warmth comes from color, type, and word choice — not glyphs.
-- **Example line:** *"Good morning, warmly."* / *"A little sun-warmed, a little imperfect on purpose."*
+- **Vibe words:** warm, direct, unpretentious, hand-finished.
+- **Emoji:** not used. Warmth comes from color and type — not word choice or glyphs.
+- **Example line:** *"Body copy sits at 16px/1.6 in Figtree."* / *"Spacing runs 4 → 128px."*
 
 ## Visual foundations
 

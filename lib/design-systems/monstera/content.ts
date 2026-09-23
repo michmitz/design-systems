@@ -17,7 +17,7 @@ export type MonsteraComponents = {
 export const monsteraContent = {
   slug: "monstera" as const,
   name: "Monstera",
-  tagline: "pressed, cataloged, quietly botanical",
+  tagline: "pressed, cataloged, botanical",
   downloadLabel: "Download tokens",
   downloadPreparingLabel: "Preparing…",
   downloadErrorLabel: "Download failed",

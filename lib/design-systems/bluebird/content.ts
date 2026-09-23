@@ -1,6 +1,6 @@
 // bluebird's own specimen content — spring/joy: a rising flight path of
-// color circles instead of Bloom's overlapping cluster, and a lowercase
-// wordmark throughout (the name is never capitalized — see readme.md).
+// color circles, and a lowercase wordmark throughout (the name is never
+// capitalized — see readme.md).
 export type BluebirdSwatch = { name: string; value: string; size: number; onDark?: boolean };
 export type BluebirdTypefaceRow = { token: string; spec: string; font: string; sample: string };
 export type BluebirdSpacingStep = { token: string; px: number };
@@ -29,9 +29,9 @@ export const bluebirdContent = {
       token: "--bb-text-body",
       spec: "400 1rem/1.6",
       font: "var(--bb-text-body)",
-      sample: "mulish keeps body copy simple and easy to read.",
+      sample: "mulish is used for body copy and interface text.",
     },
-    { token: "--bb-text-mono", spec: "400 0.9rem/1.5", font: "var(--bb-text-mono)", sample: "jetbrains mono" },
+    { token: "--bb-text-mono", spec: "400 0.9rem/1.5", font: "var(--bb-text-mono)", sample: "set in jetbrains mono" },
   ] satisfies BluebirdTypefaceRow[],
   // Arranged along a rising flight path rather than an overlapping cluster —
   // see specimen.module.css's .flightPath.

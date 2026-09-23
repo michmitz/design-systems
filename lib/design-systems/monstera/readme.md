@@ -1,6 +1,6 @@
 # Monstera — a botanical field-guide system
 
-A from-scratch foundations system built around a herbarium/specimen-sheet idea: parchment paper, moss and stone tones, and a typewritten catalog voice. No existing brand was attached — palette and type were invented to feel pressed, cataloged, and quietly botanical rather than lush or tropical.
+A from-scratch foundations system built around a herbarium/specimen-sheet idea: parchment paper, moss and stone tones, and a typewritten catalog voice. No existing brand was attached — palette and type were invented to feel pressed, cataloged, and botanical rather than lush or tropical.
 
 ## Content fundamentals
 
